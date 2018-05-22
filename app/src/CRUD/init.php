@@ -1,0 +1,2 @@
+<?php
+$db = new Database();
