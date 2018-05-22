@@ -53,7 +53,7 @@
 		 return $stmt->fetchAll();
 	 }
 
-	 function getArticleID($db, $id){
+	 function getArticleID( $id){
 		 $stmt = $this->db->prepare('SELECT `id`, `title`, `subtitle`,`img_src`,`img_alt`,`content`,`logo_img`,`company_name` FROM `articles` WHERE `id` = :id');
 		 $stmt->execute([
 			 ':id' => $id
@@ -65,7 +65,36 @@
 
 	 // UPDATE
 
+
+	 function editArticle($id, $title, $subtitle, $img_src, $img_alt, $content, $logo_img, $company_name){
+		 $stmt = $this->db->prepare(
+			 'UPDATE articles SET `title` = :title, `subtitle` = :subtitle, `img_alt`= :img_alt, `img_src`= :img_src, `content` = :content, `logo_img` = :logo_img, `company_name` = :company_name WHERE id = :id');
+		 $stmt->execute([
+			 ':id' => $id,
+			 ':title' => $title,
+			 ':subtitle' => $subtitle,
+			 ':img_alt' => $img_alt,
+			 ':img_src' => $img_src,
+			 ':content' => $content,
+			 ':logo_img' => $logo_img,
+			 ':company_name' => $company_name,
+		 ]);
+
+		 $result = $stmt->rowCount();
+
+		 return $result === 1;
+
+	 }
+
 	 //DELETE
+
+	 function deleteArticle( $id){
+		 $stmt = $this->db->prepare('DELETE FROM `articles` WHERE id = :id');
+		 $stmt->execute([
+			 ':id' => $id
+		 ]);
+		 return $stmt->rowCount() === 1;
+	 }
 
 	 //REDIRECTION
 
