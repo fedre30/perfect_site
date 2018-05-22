@@ -14,6 +14,7 @@
 
 
     <!-- Your styles -->
-    <link rel="stylesheet" href="../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/style.css">
 </head>
 <body>

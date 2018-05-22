@@ -1,34 +1,20 @@
 /*
-Error: Inconsistent indentation: 3 spaces were used for indentation, but the rest of the document was indented using 2 spaces.
-        on line 6 of ../styles/includes/header.sass
-        from line 1 of main.sass
+Error: File to import not found or unreadable: header.
+        on line 1 of main.sass
 
-1: .header
-2:   background:  url(/images/thumbnail.jpeg) no-repeat center center fixed
-3:   width: 100%
-4:   height: auto
-5: .header-navListItem
-6:    float: left
-7:    display: inline-block
-8:    text-decoration: none
-9:    .container
-10:      margin: 0 auto
-11:      width: 85%
+1: @import "header"
+2: @import "section.css"
+3: 
+4: body
+5:   background-color: green
 
 Backtrace:
-../styles/includes/header.sass:6
 main.sass:1
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/engine.rb:494:in `block in tabulate'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/engine.rb:452:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/engine.rb:452:in `each_with_index'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/engine.rb:452:in `tabulate'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/engine.rb:417:in `_to_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/engine.rb:321:in `to_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:45:in `import'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:79:in `block in with_base'
@@ -66,4 +52,4 @@ main.sass:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Inconsistent indentation: 3 spaces were used for indentation, but the rest of the document was indented using 2 spaces.\A         on line 6 of ../styles/includes/header.sass\A         from line 1 of main.sass\A \A 1: .header\A 2:   background:  url(/images/thumbnail.jpeg) no-repeat center center fixed\A 3:   width: 100%\A 4:   height: auto\A 5: .header-navListItem\A 6:    float: left\A 7:    display: inline-block\A 8:    text-decoration: none\A 9:    .container\A 10:      margin: 0 auto\A 11:      width: 85%"; }
+  content: "Error: File to import not found or unreadable: header.\A         on line 1 of main.sass\A \A 1: @import \"header\"\A 2: @import \"section.css\"\A 3: \A 4: body\A 5:   background-color: green"; }
