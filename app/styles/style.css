@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.header {
+  background: url(../thumbnail.jpeg) no-repeat center center fixed;
+  width: 100%;
+  height: 900px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-navListItem {
+  float: right;
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.header-navListItem-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.header-navListItem-link:hover {
+  font-size: 18px;
+  color: #FFD500;
+}
+
+.header-buttom {
+  background: none;
+  opacity: 61%;
+  font-size: 14px;
+  color: #D8D8D8;
+  border-radius: #979797 solid 7px;
+  margin-top: 30px;
+  margin-top: 30px;
+}
+
+.header-span-text {
+  color: #FFF;
+}
+
+.header-title {}
+
+.header-socialReseaux {
+  margin-top: 34em;
+}
+
+.header-titleItem {
+  color: #FFFF;
+  font-weight: 1;
+  font-size: 70px;
+}
+
+.header-span-text1 {
+  font-weight: bold;
+}
+
+.header-socialItem {
+  display: inline-block;
+  margin: 10px;
+  margin-right: 10px;
+}
+
+.heropanel {
+  width: 100%;
+  font-size: 16px;
+  height: auto;
+  font-family: 'Ubuntu', sans-serif;
+  position: absolute;
+}
+
+.heropanel-navListItem {
+  float: right;
+  display: inline-block;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.heropanel-navListItem-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.heropanel-shadows {
+  box-shadow: -1px 1px 2px;
+  width: 100%;
+  position: absolute;
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin: 0 auto;
+  width: 95%;
+  margin-top: 90px;
+}
+
+.article-100 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.article-classement {
+  width: 60%;
+  margin-top: 70px;
+}
+
+.article-classementContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-actualiter {
+  background-color: #FAFAFA;
+  height: 75%;
+}
+
+.article-text {
+  width: 480px;
+  line-height: inherit;
+}
+
+.article-classementItems {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-title {
+  font-size: 50px;
+}
