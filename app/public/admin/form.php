@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <?php
 
 /**
@@ -7,9 +6,13 @@
  * Pages' titles and IDs which are a link to page's details (show.php?id=PAGEID)
  * Form to add a page
  */
-require 'db.php';
-require 'init.php';
+include '../../src/admin/head.php';
+require '../../src/admin/db.php';
+require '../../src/admin/init.php';
 
+if(!isAuthenticated()){
+    $db->redirectToLogin();
+}
 ?>
 
 <h2 class="admin-title">Admin page</h2>
@@ -37,22 +40,24 @@ require 'init.php';
 <form method="post" action="addArticle.php" class="pages-form">
 	<input name="title" type="text" placeholder="Title">
 	<input name="subtitle" type="text" placeholder="Subtitle">
-	<input name="img_src" type="text" placeholder="Image source">
+	<input name="img_src" type="file" placeholder="Image source">
 	<input name="img_alt" type="text" placeholder="Image description">
 	<input name="content" type="text" placeholder="Article content">
 	<input name="logo_img" type="text" placeholder="Logo">
 	<input name="company_name" type="text" placeholder="Company">
-    <select>
+    <select name="category">
 	<?php
-	$category  = isset( $_GET['category'] ) ? max( 0, intval( $_GET['category'] ) ) : 0;
+	$category = isset( $_GET['category'] ) ? max( 0, intval( $_GET['category'] ) ) : 0;
 	$categories = $db->getCategories($category);
 
 	foreach ( $categories as $category ) {
 		?>
-        <option value="<?= $category['name'] ?>"></option>
+        <option value="<?= $category['name'] ?>"><?= $category['name'] ?></option>
 	<?php } ?>
     </select>
 	<input type="submit">
 </form>
 
-<div class="website-link"><a href="../../index.html" class="website-link">Go to website</a></div>
+<div class="website-link"><a href="../index.php" class="website-link">Go to website</a></div>
+
+<?php include '../../src/admin/footer.php' ?>

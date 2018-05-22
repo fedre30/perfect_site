@@ -6,8 +6,9 @@
  * @editPage link
  * @deletePage link
  */
-require 'db.php';
-require 'init.php';
+require '../../src/admin/db.php';
+require '../../src/admin/init.php';
+require '../../src/admin/head.php';
 
 $id   = $_GET['id'];
 $article = $db->getArticleID($id)
@@ -19,11 +20,13 @@ $article = $db->getArticleID($id)
 <p><span >Image source: </span> <?= $article['img_src'] ?></p>
 <p><span >Content: </span> <?= $article['content'] ?></p>
 <p><span >Logo: </span> <?= $article['logo_img'] ?></p>
-<p><span >Logo: </span> <?= $article['company_name'] ?></p>
+<p><span >Company: </span> <?= $article['company_name'] ?></p>
 </div>
 
 <div class="links-wrapper">
-	<a href="../index.php" class="show-link">Admin Homepage</a><br>
-	<a href="editArticle.php?id=<?= $article['id'] ?>" class="show-link">Edit page</a><br>
-	<a href="deleteArticle.php?id=<?= $article['id'] ?>" class="show-link">Delete page</a>
+	<a href="/admin/" class="show-link">Admin Homepage</a><br>
+	<a href="/admin/editArticle.php?id=<?= $article['id'] ?>" class="show-link">Edit page</a><br>
+	<a href="/admin/deleteArticle.php?id=<?= $article['id'] ?>" class="show-link">Delete page</a>
 </div>
+
+<?php include '../../src/admin/footer.php' ?>

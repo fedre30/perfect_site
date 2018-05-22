@@ -5,8 +5,9 @@
 /**
  * @editPage form
  */
-require 'db.php';
-require 'init.php';
+require '../../src/admin/db.php';
+require '../../src/admin/init.php';
+require '../../src/admin/head.php';
 
 $id = $_GET['id'];
 $article = $db->getArticleID($id);
@@ -26,4 +27,4 @@ $article = $db->getArticleID($id);
 	<input type="submit">
 </form>
 
-<div class="website-link"><a href="../index.php" class="website-link">Back to Admin Page</a></div>
+<div class="website-link"><a href="/admin/" class="website-link">Back to Admin Page</a></div>

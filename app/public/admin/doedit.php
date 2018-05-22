@@ -1,6 +1,6 @@
 <?php
-require 'db.php';
-require 'init.php';
+require '../../src/admin/db.php';
+require '../../src/admin/init.php';
 
 
 $fields = array( 'title', 'subtitle', 'img_alt', 'img_src', 'content', 'logo_img', 'company_name' );
@@ -21,5 +21,5 @@ $logo_img     = htmlentities( $_POST['logo_img'] );
 $company_name = htmlentities( $_POST['company_name'] );
 
 if ( $db->editArticle( $id, $title, $subtitle, $img_src, $img_alt, $content, $logo_img, $company_name ) ) {
-	$db->redirectToIndex();
+	$db->redirectToLogin();
 }
