@@ -3,7 +3,7 @@ require 'db.php';
 require 'init.php';
 
 
-$fields = array('title', 'subtitle', 'img_alt', 'img_src', 'content', 'logo_img', 'company_name' );
+$fields = array( 'title', 'subtitle', 'img_alt', 'img_src', 'content', 'logo_img', 'company_name' );
 
 foreach ( $fields as $field ) {
 	if ( ! isset( $_POST[ $field ] ) || empty( trim( $_POST[ $field ] ) ) ) {
@@ -11,7 +11,7 @@ foreach ( $fields as $field ) {
 		die;
 	}
 }
-$id           = htmlentities($_POST['id']);
+$id           = htmlentities( $_POST['id'] );
 $title        = htmlentities( $_POST['title'] );
 $subtitle     = htmlentities( $_POST['subtitle'] );
 $img_alt      = htmlentities( $_POST['img_alt'] );

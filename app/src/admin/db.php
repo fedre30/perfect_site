@@ -22,9 +22,9 @@
 	 // CREATE
 
 
-	 function addArticle($title, $subtitle, $img_src, $img_alt, $content, $logo_img, $company_name){
+	 function addArticle($title, $subtitle, $img_src, $img_alt, $content, $logo_img, $company_name, $category){
 		 $stmt = $this->db->prepare(
-			 'INSERT INTO `articles`( `title`,`subtitle`,`img_src`,`img_alt`,`content`,`logo_img`,`company_name`)
+			 'INSERT INTO `articles`( `title`,`subtitle`,`img_src`,`img_alt`,`content`,`logo_img`,`company_name`, `category`)
 		VALUES ( :title, :subtitle, :img_src, :img_alt, :content, :logo_img, :company_name)');
 		 $stmt->execute([
 			 ':title' => $title,
@@ -34,12 +34,12 @@
 			 ':content' => $content,
 			 ':logo_img' => $logo_img,
 			 ':company_name' => $company_name,
+
 		 ]);
 
 		 $result = $stmt->rowCount();
 
 		 return $result === 1;
-
 
 	 }
 
@@ -62,6 +62,13 @@
 		 return $stmt->fetch();
 	 }
 
+	 function getCategories($category){
+	 	$stmt = $this->db->prepare('SELECT `name` FROM `categories` LIMIT 20 OFFSET :category');
+	 	$stmt->bindValue(':category', (int) $category, PDO::PARAM_INT);
+	 	$stmt->execute();
+	 	return $stmt->fetchAll();
+	 }
+
 
 	 // UPDATE
 
@@ -77,7 +84,7 @@
 			 ':img_src' => $img_src,
 			 ':content' => $content,
 			 ':logo_img' => $logo_img,
-			 ':company_name' => $company_name,
+			 ':company_name' => $company_name
 		 ]);
 
 		 $result = $stmt->rowCount();
@@ -102,5 +109,27 @@
 		 header("Location: /");
 		 die();
 	 }
+
+
+	 // CONNECTION
+
+	 function connectUser($username, $password)
+	 {
+		 $stmt = $this->db->prepare("SELECT * FROM admin WHERE username = :username");
+		 $stmt->execute([':username' => $username]);
+		 $result = $stmt->fetchAll();
+		 if (count($result) === 0) {
+			 return false;
+		 }
+		 $passwordHashed = $result[0]['password'];
+		 $passwordVerified = password_verify($password, $passwordHashed);
+		 if ($passwordVerified === false) {
+			 return false;
+		 } else {
+			 $this->redirectToIndex();
+		 }
+	 }
+
+
 
  }
