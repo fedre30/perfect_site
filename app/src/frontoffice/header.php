@@ -12,17 +12,11 @@
 	<link rel="canonical" href="http://www.example.com/">
 	-->
 
-    <div class="container">
-        <div class="row">
-            <div class="six columns">
-                <h2></h2>
-            </div>
-            <div class="six columns"></div>
-        </div>
-    </div>
 
     <!-- Your styles -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/reset.css">
     <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/skeleton.css">
 </head>
 <body>

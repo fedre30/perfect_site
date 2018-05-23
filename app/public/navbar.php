@@ -1,4 +1,4 @@
-<div class="container">
+<div class="navbar">
     <div class="header-logo">
         <img class="header-logoImg" src="assets/images/logo.png" alt="">
     </div>
