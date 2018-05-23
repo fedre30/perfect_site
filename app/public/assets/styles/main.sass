@@ -6,6 +6,7 @@ body
   margin: 0
   padding: 0
   font-family: 'Ubuntu', sans-serif
+  overflow-x: hidden
 
 .bold
   font-weight: bold
@@ -23,9 +24,14 @@ body
   opacity: 0
   transition: opacity .2s ease
 
+  @media (max-width: 760px)
+    display: none
+
 .active
   display: flex
   opacity: 1
+  @media (max-width: 760px)
+    display: none
 
 .heropanel-logo
   width: 300px
@@ -45,6 +51,38 @@ body
 .heropanel-navListItem-link
   text-decoration: none
   color: #000000
+
+// NEWS
+.news
+  &-card
+    width: 100px
+    height: 200px
+    margin-top: 10vh
+    display: flex
+    padding: 2rem
+    box-shadow: 3px 3px 10px rgba(158,155,158,0.3)
+
+    @media (max-width: 760px)
+      height: 300px
+  &-image
+    width: 200px
+    margin-top: 20px
+    img
+      width: 100%
+  &-content
+    margin-left: 3rem
+  &-title-container
+    display: flex
+  &-title
+    margin-right: 2rem
+  &-text
+    line-height: 3rem
+    @media (max-width: 760px)
+      font-size: 1.5rem
+
+
+
+
 
 // TOP
 .top
@@ -78,10 +116,14 @@ body
 
 .card-container
   margin-bottom: 50px
+  @media (max-width: 760px)
+    margin-bottom: 100px
 
 .top-link
   position: absolute
   left: 30%
+  @media (max-width: 760px)
+    display: none
   &:before
     content: ""
     width: 30px
@@ -93,6 +135,12 @@ body
   a
     text-decoration: none
     color: black
+
+//PDF
+
+.pdf
+  @media (max-width: 760px)
+    display: none
 
 // MAGAZINE
 .magazine-image
@@ -129,6 +177,9 @@ body
   padding: 2rem
   display: flex
   position: relative
+  @media (max-width: 760px)
+    height: 15vh
+    flex-direction: column
 
   &-left
     display: flex
@@ -136,12 +187,17 @@ body
   &-logo
     width: 250px
     margin-left: 8vh
+    @media (max-width: 760px)
+      margin: 0 auto
     img
       width: 100%
 
   &-copyright
     display: inline-block
     margin: 1.3rem 4rem
+    @media (max-width: 760px)
+      font-size: 1.2rem
+
 
 
   &-social
@@ -150,8 +206,14 @@ body
     display: flex
     right: 10vh
     margin-bottom: 2vh
+    @media (max-width: 760px)
+      position: static
+      margin: 2vh auto
   .social-item
     margin-left: 2rem
+    width: 20px
+    img
+      width: 100%
 
 
 

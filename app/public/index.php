@@ -38,59 +38,114 @@
     </ul>
 </section>
 
-<!-- TOP 100 SECTION -->
 
-<section class="top container">
+<!-- NEWS -->
+<section class="news container">
     <div class="row">
         <div class="nine columns">
+            <div class="row">
+                <div class="twelve columns news-card">
+                    <div class="news-image">
+                        <img src="assets/images/logo-british-airways.png">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-title-container">
+                            <h3 class="news-title">Title</h3>
+                            <h4 class="news-subtitle">Subtitle</h4>
+                        </div>
+                        <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ducimus
+                            fugit maxime modi porro quas quod veniam! At consectetur earum est, exercitationem mollitia
+                            nobis nostrum similique soluta tempora ut voluptatem.</p>
+                    </div>
+                </div>
+            </div><div class="row">
+                <div class="twelve columns news-card">
+                    <div class="news-image">
+                        <img src="assets/images/monogramme_af.png">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-title-container">
+                            <h3 class="news-title">Title</h3>
+                            <h4 class="news-subtitle">Subtitle</h4>
+                        </div>
+                        <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ducimus
+                            fugit maxime modi porro quas quod veniam! At consectetur earum est, exercitationem mollitia
+                            nobis nostrum similique soluta tempora ut voluptatem.</p>
+                    </div>
+                </div>
+            </div><div class="row">
+                <div class="twelve columns news-card">
+                    <div class="news-image">
+                        <img src="assets/images/emirates-airlines-logo-01.png">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-title-container">
+                            <h3 class="news-title">Title</h3>
+                            <h4 class="news-subtitle">Subtitle</h4>
+                        </div>
+                        <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ducimus
+                            fugit maxime modi porro quas quod veniam! At consectetur earum est, exercitationem mollitia
+                            nobis nostrum similique soluta tempora ut voluptatem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="three columns twitter"><a class="twitter-timeline" data-width="400" data-height="980"
+                                              href="https://twitter.com/MeloFedre/lists/une-ann-e-de-voyages?ref_src=twsrc%5Etfw">A
+                Twitter List by MeloFedre</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+</section>
+
+<!-- TOP 100 SECTION -->
+<section class="top container">
+    <div class="row">
+        <div class="twelve columns">
             <div class="top-title-container">
                 <h2 class="top-title">Top 100</h2>
                 <div class="dot"><img src="assets/images/dot.png"></div>
             </div>
             <div class="card-container">
                 <div class="row">
-                    <div class="seven columns top-text">
+                    <div class="nine columns top-text">
                         <h3>Meilleurs <span class="bold">Hôtels</span></h3>
                         <p>Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V
                             Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V.</p>
                         <div class="top-link"><a href="#">Voir plus</a></div>
                     </div>
                     <div class="three columns top-image">
-                        <img src="assets/images/island.jpg">
+                        <a href="#"><img src="assets/images/island.jpg"></a>
                     </div>
                 </div>
             </div>
             <div class="card-container">
                 <div class="row">
-                    <div class="seven columns top-text">
+                    <div class="nine columns top-text">
                         <h3>Meilleurs <span class="bold">Restaurants</span></h3>
                         <p>Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V
                             Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V.</p>
                         <div class="top-link"><a href="#">Voir plus</a></div>
                     </div>
                     <div class="three columns top-image">
-                        <img src="assets/images/resto.jpg">
+                        <a href="#"><img src="assets/images/resto.jpg"></a>
                     </div>
                 </div>
             </div>
             <div class="card-container">
                 <div class="row">
-                    <div class="seven columns top-text">
+                    <div class="nine columns top-text">
                         <h3>Meilleurs <span class="bold">Spas</span></h3>
                         <p>Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V
                             Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V.</p>
                         <div class="top-link"><a href="#">Voir plus</a></div>
                     </div>
                     <div class="three columns top-image">
-                        <img src="assets/images/spa.jpg">
+                        <a href="#"><img src="assets/images/spa.jpg"></a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="three columns twitter"><a class="twitter-timeline" data-width="400" data-height="980"
-                                              href="https://twitter.com/MeloFedre/lists/une-ann-e-de-voyages?ref_src=twsrc%5Etfw">A
-                Twitter List by MeloFedre</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
 </section>
@@ -231,12 +286,12 @@
         <div class="footer-copyright">© Copyright 2018. All rights reserved.</div>
     </div>
     <div class="footer-social">
-        <div class="social-item"><a href="#"><img src="assets/images/youtube-rounded-square-logo.svg"
+        <div class="social-item"><a href="#"><img src="assets/images/youtube-rounded-square-logo.png"
                                                   alt="youtube logo"></a></div>
-        <div class="social-item"><a href="#"><img src="assets/images/instagram.svg" alt="instagram logo"></a></div>
-        <div class="social-item"><a href="#"><img src="assets/images/twitter-logo-silhouette.svg"
+        <div class="social-item"><a href="#"><img src="assets/images/instagram.png" alt="instagram logo"></a></div>
+        <div class="social-item"><a href="#"><img src="assets/images/twitter-logo-silhouette.png"
                                                   alt="twitter logo"></a></div>
-        <div class="social-item"><a href="#"><img src="assets/images/facebook-logo.svg" alt="facebook logo"></a></div>
+        <div class="social-item"><a href="#"><img src="assets/images/facebook-logo.png" alt="facebook logo"></a></div>
     </div>
 
 </footer>

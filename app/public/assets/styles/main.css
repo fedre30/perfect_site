@@ -6,7 +6,8 @@
   width: 100%;
   height: 100vh;
   font-family: "Ubuntu", sans-serif;
-  z-index: 10000; }
+  z-index: 10000;
+  overflow-x: hidden; }
 
 .navbar {
   display: flex;
@@ -34,6 +35,34 @@
         transition: color 0.1s ease; }
       .navbar .header-navList .header-navListItem a:hover {
         color: #222222; }
+      @media (max-width: 880px) {
+        .navbar .header-navList .header-navListItem {
+          margin: 2vh auto; }
+          .navbar .header-navList .header-navListItem a {
+            color: black; } }
+  @media (max-width: 880px) {
+    .navbar .header-burger {
+      width: 30px;
+      margin-left: 1rem;
+      cursor: pointer;
+      right: 2rem;
+      top: 2rem;
+      z-index: 10000;
+      position: fixed; }
+      .navbar .header-burger img {
+        width: 100%; }
+    .navbar .header-navList {
+      width: 100vw;
+      position: absolute;
+      transition: right 0.3s ease;
+      right: -100vw;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.9);
+      height: 100vh;
+      margin-top: -3rem; }
+    .navbar .menuOpen {
+      right: 0; } }
 
 .header-title {
   font-size: 10rem;
@@ -41,6 +70,10 @@
   position: absolute;
   left: 8vh;
   top: 50%; }
+  @media (max-width: 760px) {
+    .header-title {
+      font-size: 7rem;
+      top: 50%; } }
 
 .header-tag {
   width: 200px;
@@ -55,6 +88,9 @@
   padding: 0.5rem;
   text-align: center;
   border-radius: 1rem; }
+  @media (max-width: 760px) {
+    .header-tag {
+      display: none; } }
 
 .header-social {
   position: absolute;
@@ -67,7 +103,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu", sans-serif; }
+  font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden; }
 
 .bold {
   font-weight: bold; }
@@ -84,10 +121,16 @@ body {
   z-index: 10000;
   opacity: 0;
   transition: opacity 0.2s ease; }
+  @media (max-width: 760px) {
+    .heropanel {
+      display: none; } }
 
 .active {
   display: flex;
   opacity: 1; }
+  @media (max-width: 760px) {
+    .active {
+      display: none; } }
 
 .heropanel-logo {
   width: 300px;
@@ -107,6 +150,33 @@ body {
 .heropanel-navListItem-link {
   text-decoration: none;
   color: #000000; }
+
+.news-card {
+  width: 100px;
+  height: 200px;
+  margin-top: 10vh;
+  display: flex;
+  padding: 2rem;
+  box-shadow: 3px 3px 10px rgba(158, 155, 158, 0.3); }
+  @media (max-width: 760px) {
+    .news-card {
+      height: 300px; } }
+.news-image {
+  width: 200px;
+  margin-top: 20px; }
+  .news-image img {
+    width: 100%; }
+.news-content {
+  margin-left: 3rem; }
+.news-title-container {
+  display: flex; }
+.news-title {
+  margin-right: 2rem; }
+.news-text {
+  line-height: 3rem; }
+  @media (max-width: 760px) {
+    .news-text {
+      font-size: 1.5rem; } }
 
 .top {
   display: flex; }
@@ -138,10 +208,16 @@ body {
 
 .card-container {
   margin-bottom: 50px; }
+  @media (max-width: 760px) {
+    .card-container {
+      margin-bottom: 100px; } }
 
 .top-link {
   position: absolute;
   left: 30%; }
+  @media (max-width: 760px) {
+    .top-link {
+      display: none; } }
   .top-link:before {
     content: "";
     width: 30px;
@@ -153,6 +229,10 @@ body {
   .top-link a {
     text-decoration: none;
     color: black; }
+
+@media (max-width: 760px) {
+  .pdf {
+    display: none; } }
 
 .magazine-image {
   width: 100%; }
@@ -182,23 +262,40 @@ body {
   padding: 2rem;
   display: flex;
   position: relative; }
+  @media (max-width: 760px) {
+    .footer {
+      height: 15vh;
+      flex-direction: column; } }
   .footer-left {
     display: flex; }
   .footer-logo {
     width: 250px;
     margin-left: 8vh; }
+    @media (max-width: 760px) {
+      .footer-logo {
+        margin: 0 auto; } }
     .footer-logo img {
       width: 100%; }
   .footer-copyright {
     display: inline-block;
     margin: 1.3rem 4rem; }
+    @media (max-width: 760px) {
+      .footer-copyright {
+        font-size: 1.2rem; } }
   .footer-social {
     position: absolute;
     bottom: 0;
     display: flex;
     right: 10vh;
     margin-bottom: 2vh; }
+    @media (max-width: 760px) {
+      .footer-social {
+        position: static;
+        margin: 2vh auto; } }
   .footer .social-item {
-    margin-left: 2rem; }
+    margin-left: 2rem;
+    width: 20px; }
+    .footer .social-item img {
+      width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

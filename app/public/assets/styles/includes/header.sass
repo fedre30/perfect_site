@@ -5,6 +5,9 @@
   height: 100vh
   font-family: 'Ubuntu', sans-serif
   z-index: 10000
+  overflow-x: hidden
+
+
 
 .navbar
   display: flex
@@ -35,6 +38,38 @@
       a:hover
         color: #222222
 
+      @media (max-width: 880px)
+        margin: 2vh auto
+        a
+          color: black
+
+  @media (max-width: 880px)
+    .header-burger
+      width: 30px
+      margin-left: 1rem
+      cursor: pointer
+      right: 2rem
+      top: 2rem
+      z-index: 10000
+      position: fixed
+      img
+        width: 100%
+
+    .header-navList
+      width: 100vw
+      position: absolute
+      transition: right .3s ease
+      right: -100vw
+      display: flex
+      flex-direction: column
+      background-color: rgba(255, 255, 255, 0.9)
+      height: 100vh
+      margin-top: -3rem
+      
+
+    .menuOpen
+      right: 0
+
 
 .header-title
   font-size: 10rem
@@ -42,6 +77,9 @@
   position: absolute
   left: 8vh
   top: 50%
+  @media (max-width: 760px)
+    font-size: 7rem
+    top: 50%
 
 .header-tag
   width: 200px
@@ -56,6 +94,8 @@
   padding: 0.5rem
   text-align: center
   border-radius: 1rem
+  @media (max-width: 760px)
+    display: none
 
 .header-social
   position: absolute

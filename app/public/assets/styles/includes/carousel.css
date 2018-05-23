@@ -89,12 +89,14 @@ url('font/Ubuntu-Regular') format ('ttf');
 
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+    .carousel{
+       height: 40vh;
+    }
     .carousel .oval span {
-        position: relative;
-        display: inline-flex;
         margin-top: 3rem;
         width: 30%;
+        font-size: 2rem;
     }
 
 }
