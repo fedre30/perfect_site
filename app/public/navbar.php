@@ -6,7 +6,7 @@
     <nav>
         <ul class="header-navList">
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="#">top 100</a>
+                <a class="header-navListItem-link" href="#">Top 100</a>
             </li>
             <li class="header-navListItem">
                 <a class="header-navListItem-link" href="#">Voyages</a>

@@ -5,10 +5,88 @@ body
   margin: 0
   padding: 0
   font-family: 'Ubuntu', sans-serif
-.header
-  background: url("../images/thumbnail.jpeg")
-  background-size: cover
+
+.bold
+  font-weight: bold
+
+.heropanel
+  width: 100vw
+  height: 5vh
+  display: flex
+  justify-content: space-between
+  padding: 2rem 0
+  box-shadow: 0 10px 7px -4px rgba(158,155,158,0.3)
+
+.heropanel-logo
+  width: 300px
+  margin-left: 8vh
+  img
+    width: 100%
+.heropanel-navList
+  display: flex
+  margin-right: 5vh
+
+.heropanel-navListItem
+  list-style: none
+  margin-right: 2rem
+  font-size: 2.5rem
+
+
+.heropanel-navListItem-link
+  text-decoration: none
+  color: #000000
+
+// TOP
+.top
+  display: flex
+
+  p
+    width: 85%
+    font-weight: 300
+.top-title-container
+  display: flex
+  margin: 50px 0
+
+.dot
+  width: 10px
+  height: 20px
+  margin: 15px 0 0 15px
+  img
+    width: 100%
+
+.card-container
   width: 100%
-  height: 100vh
-  font-family: 'Ubuntu', sans-serif
-  z-index: 10000
+
+.top-image
+    width: 200px
+    img
+      width: 100%
+
+.twitter
+  width: 300px
+  height: 700px
+  background-color: grey
+
+.card-container
+  margin-bottom: 50px
+
+.top-link
+  position: absolute
+  left: 30%
+  &:before
+    content: ""
+    width: 30px
+    height: 3px
+    background-color: black
+    position: absolute
+    top: 10px
+    right: 70px
+  a
+    text-decoration: none
+    color: black
+
+
+
+
+
+
