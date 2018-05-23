@@ -5,7 +5,7 @@
 /**
  * @Delete form confirmation
  */
-require '../../src/admin/db.php';
+require '../../src/db.php';
 require '../../src/admin/init.php';
 require '../../src/admin/head.php';
 

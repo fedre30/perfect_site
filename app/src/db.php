@@ -22,10 +22,10 @@ class Database {
 	// CREATE
 
 
-	function addArticle( $title, $subtitle, $img_src, $img_alt, $content, $logo_img, $company_name ) {
+	function addArticle( $title, $subtitle, $img_src, $img_alt, $content, $logo_img, $company_name, $category_id ) {
 		$stmt = $this->db->prepare(
-			'INSERT INTO `articles`( `title`,`subtitle`,`img_src`,`img_alt`,`content`,`logo_img`,`company_name`, `category`)
-		VALUES ( :title, :subtitle, :img_src, :img_alt, :content, :logo_img, :company_name)' );
+			'INSERT INTO `articles`( `title`,`subtitle`,`img_src`,`img_alt`,`content`,`logo_img`,`company_name`, `category_id`)
+		VALUES ( :title, :subtitle, :img_src, :img_alt, :content, :logo_img, :company_name, :category_id)' );
 		$stmt->execute( [
 			':title'        => $title,
 			':subtitle'     => $subtitle,
@@ -34,6 +34,7 @@ class Database {
 			':content'      => $content,
 			':logo_img'     => $logo_img,
 			':company_name' => $company_name,
+			':category_id' => $category_id,
 
 		] );
 
@@ -46,9 +47,9 @@ class Database {
 
 	// READ
 
-	function getArticles( $article ) {
-		$stmt = $this->db->prepare( 'SELECT `id`, `title` FROM `articles` LIMIT 20 OFFSET :article' );
-		$stmt->bindValue( ':article', (int) $article, PDO::PARAM_INT );
+	function getArticles( $page ) {
+		$stmt = $this->db->prepare( 'SELECT `id`, `title` FROM `articles` LIMIT 20 OFFSET :page' );
+		$stmt->bindValue( ':page', (int) $page, PDO::PARAM_INT );
 		$stmt->execute();
 
 		return $stmt->fetchAll();
@@ -63,12 +64,34 @@ class Database {
 		return $stmt->fetch();
 	}
 
-	function getCategories( $category ) {
-		$stmt = $this->db->prepare( 'SELECT `name` FROM `categories` LIMIT 20 OFFSET :category' );
-		$stmt->bindValue( ':category', (int) $category, PDO::PARAM_INT );
+	function getCategoryByName( $name ) {
+		$stmt = $this->db->prepare( 'SELECT id FROM categories WHERE LOWER(name) LIKE LOWER(:name) LIMIT 1');
+		$stmt->execute( [
+			':name' => $name
+		] );
+
+		return $stmt->fetch();
+	}
+
+	function getCategories( $page ) {
+		$stmt = $this->db->prepare( 'SELECT `name` FROM `categories` LIMIT 20 OFFSET :page' );
+		$stmt->bindValue( ':page', (int) $page, PDO::PARAM_INT );
 		$stmt->execute();
 
 		return $stmt->fetchAll();
+	}
+
+	function getArticlesInCategory( $page, $categoryId ) {
+		$stmt = $this->db->prepare( 'SELECT * FROM `articles` WHERE `category_id` = :category_id LIMIT 20 OFFSET :page' );
+		$stmt->bindValue( ':page', (int) $page, PDO::PARAM_INT );
+		$stmt->bindValue( ':category_id', intval($categoryId), PDO::PARAM_INT );
+		$stmt->execute();
+
+		return $stmt->fetchAll();
+	}
+
+	function getAirlines( $page ) {
+		return $this->getArticlesInCategory($page, $this->getCategoryByName('Compagnies aériennes')['id']);
 	}
 
 

@@ -8,7 +8,12 @@
         </div>
         <ul class="header-navList">
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="#">Top 100</a>
+                <a class="header-navListItem-link submenu-header" href="#">Top 100</a>
+                <ul class="top-submenu">
+                    <li class="submenu-item"><a href="">Hotels</a></li>
+                    <li class="submenu-item"><a href="">Restaurants</a></li>
+                    <li class="submenu-item"><a href="">Spas</a></li>
+                </ul>
             </li>
             <li class="header-navListItem">
                 <a class="header-navListItem-link" href="#">Voyages</a>

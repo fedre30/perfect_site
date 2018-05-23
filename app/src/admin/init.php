@@ -5,5 +5,4 @@ $db = new Database();
 
 function isAuthenticated(){
 	return isset($_COOKIE['User']);
-
 }

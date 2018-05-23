@@ -1,5 +1,5 @@
 <?php
-require '../../src/admin/db.php';
+require '../../src/db.php';
 require '../../src/admin/init.php';
 
 

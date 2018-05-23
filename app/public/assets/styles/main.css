@@ -27,7 +27,7 @@
     position: absolute;
     right: 8vh;
     top: 3rem;
-    z-index: 10000; }
+    z-index: 30000; }
   .navbar .header-navListItem {
     list-style: none;
     margin-left: 2rem; }
@@ -51,21 +51,22 @@
       cursor: pointer;
       right: 2rem;
       top: 2rem;
-      z-index: 10000;
+      z-index: 20000;
       position: fixed;
       display: block; }
       .navbar .header-burger img {
         width: 100%; }
     .navbar .header-navList {
       width: 100vw;
-      position: absolute;
       transition: right 0.3s ease;
       right: -100vw;
       display: flex;
       flex-direction: column;
       background-color: rgba(255, 255, 255, 0.9);
       height: 100vh;
-      margin-top: -3rem; }
+      margin-top: -3rem;
+      position: fixed;
+      z-index: 10000; }
     .navbar .menuOpen {
       right: 0; } }
 
@@ -104,6 +105,15 @@
   bottom: 5vh; }
   .header-social .social-item {
     margin-left: 2rem; }
+
+.top-submenu {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: none; }
+
+.submenu-header:hover .top-submenu {
+  display: block; }
 
 body {
   margin: 0;

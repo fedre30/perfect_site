@@ -1,4 +1,10 @@
-<?php include_once '../src/frontoffice/header.php'; ?>
+<?php
+include_once '../src/frontoffice/header.php';
+require_once '../src/db.php';
+require_once '../src/frontoffice/views.php';
+
+$db = new Database();
+?>
 
 <header class="header">
     <!-- NAVBAR -->
@@ -89,6 +95,8 @@
                     </div>
                 </div>
             </div>
+
+            <?php foreach ($db->getAirlines(0) as $airline) { airlineView($airline); } ?>
         </div>
 
         <div class="three columns twitter"><a class="twitter-timeline" data-width="400" data-height="980"
