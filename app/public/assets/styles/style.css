@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-  background: url(../thumbnail.jpeg) no-repeat center center fixed;
+  background: url('../images/thumbnail.jpeg') no-repeat center center fixed;
   width: 100%;
   height: 900px;
   font-family: 'Ubuntu', sans-serif;
@@ -45,7 +45,7 @@ body {
   color: #D8D8D8;
   border-radius: #979797 solid 7px;
   margin-top: 30px;
-  margin-top: 30px;
+
 }
 
 .header-span-text {

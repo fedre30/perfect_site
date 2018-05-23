@@ -2,59 +2,8 @@
 
 <header class="header">
     <!-- Premier container -->
-    <div class="container">
-        <div class="header-logo">
-            <img class="header-logoImg" src="images/" alt="">
-        </div>
 
-        <!-- Plus besoin de la balise nav -->
-        <ul class="header-navList">
-            <li class="header-navListItem">
-                <a class="header-navListItem-link" href="#">top 100</a>
-            </li>
-            <li class="header-navListItem">
-                <a class="header-navListItem-link" href="#">Voyages</a>
-            </li>
-            <li class="header-navListItem">
-                <a class="header-navListItem-link" href="#">Adresses</a>
-            </li>
-            <li class="header-navListItem">
-                <a class="header-navListItem-link" href="#">Contacts</a>
-            </li>
-        </ul>
-    </div>
-    <div class="container">
-        <div class="header-title">
-            <button class="header-buttom" type="button" name="button"><span
-                        class="header-span-text">GUIDE DE VOYAGES</span></button>
-            <h1 class="header-titleItem"> Une Année<span class="header-span-text1"> de voyages .</span></h1>
-        </div>
-        <div class="header-socialReseaux">
-            <ul class="header-social">
-                <li class="header-socialItem">
-                    <a class="header-socialItem-link" href="#">
-                        <img class="hearder-socialImg" src="youtube-rounded-square-logo.png" alt="">
-                    </a>
-
-                </li>
-                <li class="header-socialItem">
-                    <a class="header-socialItem-link" href="#">
-                        <img class="hearder-socialImg" src="twitter-logo-silhouette.png" alt="">
-                    </a>
-                </li>
-                <li class="header-socialItem">
-                    <a class="header-socialItem-link" href="#">
-                        <img class="hearder-socialImg" src="instagram.png" alt="">
-                    </a>
-                </li>
-                <li class="header-socialItem">
-                    <a class="header-socialItem-link" href="#">
-                        <img class="hearder-socialImg" src="facebook-logo.png" alt="">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+   <?php include 'navbar.php'?>
 
     <!-- Fin Premier container -->
 </header>

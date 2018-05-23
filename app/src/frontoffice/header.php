@@ -23,6 +23,6 @@
 
     <!-- Your styles -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
 </head>
 <body>
