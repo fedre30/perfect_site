@@ -1,5 +1,6 @@
 <!-- build:js scripts/main.min.js -->
-<script src="../../scripts/main.js"></script>
+<script src="/scripts/carousel.js"></script>
+<script src="/scripts/main.js"></script>
 <!-- endbuild -->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

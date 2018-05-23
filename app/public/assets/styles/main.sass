@@ -1,5 +1,6 @@
 @import "../styles/includes/header"
 @import "../styles/includes/section.css"
+@import "../styles/includes/carousel.css"
 
 body
   margin: 0
@@ -12,10 +13,19 @@ body
 .heropanel
   width: 100vw
   height: 5vh
-  display: flex
   justify-content: space-between
   padding: 2rem 0
   box-shadow: 0 10px 7px -4px rgba(158,155,158,0.3)
+  position: fixed
+  top: 0
+  background-color: rgba(255, 255, 255, 255)
+  z-index: 10000
+  opacity: 0
+  transition: opacity .2s ease
+
+.active
+  display: flex
+  opacity: 1
 
 .heropanel-logo
   width: 300px
@@ -40,12 +50,13 @@ body
 .top
   display: flex
 
+
   p
     width: 85%
     font-weight: 300
 .top-title-container
   display: flex
-  margin: 50px 0
+  margin: 100px 0
 
 .dot
   width: 10px
@@ -63,9 +74,7 @@ body
       width: 100%
 
 .twitter
-  width: 300px
-  height: 700px
-  background-color: grey
+  margin-top: 3rem
 
 .card-container
   margin-bottom: 50px
@@ -84,6 +93,35 @@ body
   a
     text-decoration: none
     color: black
+
+// MAGAZINE
+.magazine-image
+  width: 100%
+  img
+    width: 100%
+.magazine-list-item
+  margin: 2rem
+  font-size: 2rem
+  width: 100%
+  list-style-type: dash
+
+//TOOLCARDS
+
+.toolcard
+  &-image
+    width: 60%
+    img
+      width: 100%
+
+  &-text
+    font-size: 2rem
+    line-height: 4rem
+
+  &-link
+    top: 60%
+
+
+
 
 
 
