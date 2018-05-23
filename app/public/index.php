@@ -24,7 +24,7 @@
 
     <ul class="heropanel-navList">
         <li class="heropanel-navListItem">
-            <a class="heropanel-navListItem-link" href="#">Top 100</a>
+            <a class="heropanel-navListItem-link" href="topRestos.php">Top 100</a>
         </li>
         <li class="heropanel-navListItem">
             <a class="heropanel-navListItem-link" href="#">Voyages</a>

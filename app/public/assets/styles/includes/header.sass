@@ -7,6 +7,8 @@
   z-index: 10000
   overflow-x: hidden
 
+  &-burger
+    display: none
 
 
 .navbar
@@ -25,23 +27,25 @@
     position: absolute
     right: 8vh
     top: 3rem
-    .header-navListItem
-      list-style: none
-      margin-left: 2rem
+    z-index: 10000
+  .header-navListItem
+    list-style: none
+    margin-left: 2rem
 
+    a
+      color: white
+      text-decoration: none
+      font-size: 2.3rem
+      transition: color .1s ease
+
+    a:hover
+      color: #222222
+
+    @media (max-width: 880px)
+      margin: 2vh auto
       a
-        color: white
-        text-decoration: none
-        font-size: 2.3rem
-        transition: color .1s ease
-
-      a:hover
-        color: #222222
-
-      @media (max-width: 880px)
-        margin: 2vh auto
-        a
-          color: black
+        color: black
+        z-index: 1000
 
   @media (max-width: 880px)
     .header-burger
@@ -52,6 +56,7 @@
       top: 2rem
       z-index: 10000
       position: fixed
+      display: block
       img
         width: 100%
 
@@ -65,7 +70,7 @@
       background-color: rgba(255, 255, 255, 0.9)
       height: 100vh
       margin-top: -3rem
-      
+
 
     .menuOpen
       right: 0
