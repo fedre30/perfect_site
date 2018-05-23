@@ -175,4 +175,30 @@ body {
 .toolcard-link {
   top: 60%; }
 
+.footer {
+  width: 100%;
+  height: 5vh;
+  background-color: #F4F4F4;
+  padding: 2rem;
+  display: flex;
+  position: relative; }
+  .footer-left {
+    display: flex; }
+  .footer-logo {
+    width: 250px;
+    margin-left: 8vh; }
+    .footer-logo img {
+      width: 100%; }
+  .footer-copyright {
+    display: inline-block;
+    margin: 1.3rem 4rem; }
+  .footer-social {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    right: 10vh;
+    margin-bottom: 2vh; }
+  .footer .social-item {
+    margin-left: 2rem; }
+
 /*# sourceMappingURL=main.css.map */

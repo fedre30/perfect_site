@@ -101,7 +101,7 @@
     <div class="container">
         <div class="row">
             <div class="top-title-container">
-                <h2 class="top-title">Top 100</h2>
+                <h2 class="top-title">Voyages</h2>
                 <div class="dot"><img src="assets/images/dot.png"></div>
             </div>
 
@@ -230,7 +230,15 @@
         </div>
         <div class="footer-copyright">© Copyright 2018. All rights reserved.</div>
     </div>
-    
+    <div class="footer-social">
+        <div class="social-item"><a href="#"><img src="assets/images/youtube-rounded-square-logo.svg"
+                                                  alt="youtube logo"></a></div>
+        <div class="social-item"><a href="#"><img src="assets/images/instagram.svg" alt="instagram logo"></a></div>
+        <div class="social-item"><a href="#"><img src="assets/images/twitter-logo-silhouette.svg"
+                                                  alt="twitter logo"></a></div>
+        <div class="social-item"><a href="#"><img src="assets/images/facebook-logo.svg" alt="facebook logo"></a></div>
+    </div>
+
 </footer>
 
 <?php include_once '../src/frontoffice/footer.php'; ?>
