@@ -185,28 +185,28 @@ $db = new Database();
             <div class="carousel-container">
                 <div class="carousel" id="carousel">
                     <div class="slide">
-                        <div class="background" style="background-image: url(assets/images/thumbnail.jpeg)"></div>
+                        <div class="background" style="background-image: url(assets/images/robin-stickel-82145-unsplash.jpg)"></div>
                         <div class="oval">
                             <h2>Gastronomie</h2>
                             <span> Goûtez aux saveurs du monde </span>
                         </div>
                     </div>
                     <div class="slide">
-                        <div class="background" style="background-image: url(assets/images/thumbnail.jpeg)"></div>
+                        <div class="background" style="background-image: url(assets/images/vitaliy-lyubezhanin-385454-unsplash.jpg)"></div>
                         <div class="oval">
                             <h2>Culture</h2>
                             <span>Découvrez un mode de vie différent du vôtre</span>
                         </div>
                     </div>
                     <div class="slide">
-                        <div class="background" style="background-image: url(assets/images/thumbnail.jpeg"></div>
+                        <div class="background" style="background-image: url(assets/images/dave-contreras-190480-unsplash.jpg)"></div>
                         <div class="oval">
                             <h2>Bien-être</h2>
                             <span>Trouvez l'apaisement de votre esprit dans des lieux mythiques</span>
                         </div>
                     </div>
                     <div class="slide">
-                        <div class="background" style="background-image: url(assets/images/thumbnail.jpeg)"></div>
+                        <div class="background" style="background-image: url(assets/images/johannes-waibel-4298-unsplash.jpg)"></div>
                         <div class="oval">
                             <h2>Sport</h2>
                             <span>Dépensez votre corps vers de nouveaux horizons</span>

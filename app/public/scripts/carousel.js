@@ -5,7 +5,7 @@ class Carousel{
         this.el = el;
         this.slides = slides;
         this.slideIndex = 0;
-        this.delay = delay || 7000;
+        this.delay = delay || 3000;
         this.intervalId = 0;
 
         this.refresh();

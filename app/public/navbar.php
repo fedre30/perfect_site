@@ -4,7 +4,7 @@
     </div>
     <nav>
         <div class="header-burger">
-            <img src="assets/images/burger.png" alt="">
+            <img src="assets/images/burger-white.png" alt="">
         </div>
         <ul class="header-navList">
             <li class="header-navListItem">

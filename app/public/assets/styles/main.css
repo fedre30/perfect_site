@@ -264,6 +264,9 @@ body {
 
 .popupOpen {
   opacity: 1; }
+  @media (min-width: 768px) {
+    .popupOpen {
+      opacity: 0; } }
 
 @media (max-width: 760px) {
   .pdf {
@@ -373,6 +376,9 @@ section {
   text-align: center;
   border-radius: 1rem;
   top: 45vh; }
+  @media (max-width: 760px) {
+    .home-lilText {
+      display: none; } }
 
 .home-Title {
   font-size: 10rem;
@@ -381,6 +387,10 @@ section {
   left: 8vh;
   /*top: 50%; */
   margin-top: 50vh; }
+  @media (max-width: 760px) {
+    .home-Title {
+      font-size: 7rem;
+      top: 50%; } }
 
 /*LIST */
 .top-title {
@@ -477,56 +487,64 @@ section {
   background: url("../images/Spabg.jpg") no-repeat;
   background-size: cover; }
 
-.contact-formInput .contact-textInput:hover {
-  cursor: pointer; }
+.home-contact {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  z-index: -1; }
 
-.contact-items {
-  display: flex;
-  justify-content: center;
-  justify-content: space-between; }
+.fichesBackground-contact {
+  background-image: url(../images/Contact.jpg);
+  margin-bottom: 30px;
+  width: 100%;
+  height: 50vh; }
 
-.contact {
-  width: 85%;
-  justify-content: center;
-  margin: 0 auto;
-  font-family: "Ubuntu", sans-serif; }
+.home-boldText-contact {
+  font-weight: 500; }
 
-.contact-textInput {
-  width: 350px;
+.home-lilText-contact {
+  width: 200px;
+  text-transform: uppercase;
   height: 40px;
-  font-size: 16px;
-  background-color: #EEEEEE;
-  border-radius: 5px;
-  border: solid 1px #EEEEEE;
-  padding-left: 20px;
-  box-sizing: border-box; }
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 130px;
+  left: 8vh;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 1rem; }
 
-.text {
-  height: 180px; }
+.home-Title-contact {
+  font-size: 10rem;
+  color: white;
+  position: absolute;
+  left: 8vh;
+  /*top: 50%; */
+  margin-top: 25vh; }
 
-.valid {
-  width: 350px;
-  background: red; }
-
-.contact-option {
-  width: 350px;
-  height: 40px;
-  font-size: 16px; }
-
-.contact-title {
-  font-size: 40px;
-  font-family: "Ubuntu", sans-serif; }
-
-.contact-text {
-  font-size: 25px;
-  font-weight: lighter; }
-
-.contact-agence {
-  text-decoration: none;
-  color: #000000; }
-
-.contact-agence-span {
+.bold-contact {
   font-weight: bold; }
+
+.container-contact {
+  width: 100%;
+  height: 50vh; }
+
+input[type=text] {
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  width: 100px;
+  box-shadow: none;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.4); }
+
+.contact-textarea {
+  width: 300px;
+  max-width: 500px;
+  max-height: 300px; }
 
 .fichesBackground {
   background: url("../images/fiches.jpg") no-repeat;
@@ -577,5 +595,9 @@ img {
   border: 2px solid #000000;
   border-radius: 1rem;
   margin-top: 50%; }
+
+.article {
+  background: url("../images/dave-contreras-190480-unsplash.jpg");
+  background-size: cover; }
 
 /*# sourceMappingURL=main.css.map */

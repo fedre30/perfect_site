@@ -17,6 +17,15 @@ burger.addEventListener('click', function () {
 
 });
 
+window.addEventListener('scroll', function () {
+   if(sectionNews.getBoundingClientRect().top < burger.offsetHeight) {
+       burgerImage.src = 'assets/images/burger.png'
+   }
+   else{
+       burgerImage.src = 'assets/images/burger-white.png'
+   }
+});
+
 // MENU FIXED
 
 const heropanel = document.querySelector('.heropanel');

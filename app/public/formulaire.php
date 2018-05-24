@@ -2,51 +2,46 @@
 <?php include_once '../src/frontoffice/header.php'; ?>
 
 
-    <div class="contact">
-      <div class="contact-items">
-        <div class="container-itemsContent">
+<section class="home fichesBackground-contact">
+    <div class="container-contact">
+        <div class="row">
 
+            <div class="twelve columns">
+                <span class="home-lilText-contact">GUIDE DE VOYAGE</span>
+            </div>
 
-          <h2 class="contact-title">
-          Une Année de Voyages.
-        </h2>
-          <p class="contact-text">
-            32 rue des peuoliers
-          </p>
-          <p class="contact-text">
-            92100 BOULOGNE
-          </p>
-          <p class="contact-text">
-            <a class="contact-agence" href="#">Tél:<span class="contact-agence-span">+33(0)41310513</span> </a>
-          </p>
-          <p class="contact-text">
-            <a class="contact-agence" href="redaction@uneanneedevoyages.com">Email: <span class="contact-agence-span">rédaction@uneanneedevoyages.com</span> </a>
-
-          </p>
-          <p class="contact-text">
-            Ouvert du Lundi au vendredi de 10h à 18h
-          </p>
-
+            <div class="six columns">
+                <h1 class="home-Title-contact">Contactez nous.</h1>
+            </div>
         </div>
-        <div class="contact-items">
-          <form action="" class="contact-form">
-
-            <p class="contact-formInput  "><select class=" contact-option" name="span-class">
-            <option class="contact-optionText" value="">Annonceur</option>
-            <option class="contact-optionText" value="label-danger">Journaliste</option>
-            <option class="contact-optionText" value="label-warning">Partenaire</option>
-            <option class="contact-optionText" value="label-success">Lecteur</option>
-            <option class="contact-optionText" value="label-primary">Office De Tourisme</option>
-        </select></p>
-            <p class="contact-formInput"><input class="contact-textInput" type="text" name="prénom" placeholder="Prénom" value=""></p>
-            <p class="contact-formInput"><input class="contact-textInput" type="text" name="nom" value="" placeholder="nom"></p>
-            <p class="contact-formInput"><input class="contact-textInput" type="paragraphe" name="Adresse-mail" value="" placeholder="Adresse-mail"></p>
-
-            <p class="contact-formInput"><input class="contact-textInput text" type="text" name="" value="" placeholder="saisir votre text"></p>
-            <p class="contact-formInput"><input class="contact-textInput valid" type="submit" name="" value="envoyer"></p>
-          </form>
-        </div>
-      </div>
     </div>
+</section>
+
+<section class="container">
+    <div class="row">
+        <div class="six columns">
+            <h3>Une Année <span class="bold-contact">de Voyages</span>.</h3> <br>
+            <span class="bold-contact">32 rue des Peuoliers</span> <br>
+            <span class="bold-contact">92100 BOULOGNE</span> <br> Tél : <span class="bold">+33(0) 413 10 513</span> <br> Email : <span class="bold">rédaction@uneanneedevoyages.com</span> <br> Ouvert du lundi au vendredi de 10h à 18h. <br>
+        </div>
+
+
+
+        <form class="four columns">
+            <select>
+                <option value="1">Journaliste</option>
+                <option value="2">Partenaire</option>
+                <option value="3">Office de tourisme</option>
+                <option value="4">Annonceur</option>
+                <option value="5">Lecteur</option>
+            </select> <br>
+            <input type="text" placeholder="Prénom" value="" class="input"> <br>
+            <input type="Email" placeholder="Mail" value="" class="input"> <br>
+            <textarea type="text" placeholder="Message" value="" class="contact-textarea"></textarea> <br>
+            <button type="submit" placeholder="button" class="buttonContact">Envoyer</button>
+        </form>
+
+    </div>
+</section
 
 <?php include_once '../src/frontoffice/footer.php'; ?>
