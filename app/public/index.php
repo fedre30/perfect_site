@@ -38,7 +38,7 @@ $db = new Database();
         <li class="heropanel-navListItem">
             <a class="heropanel-navListItem-link" href="#magazine">Magazine</a>
         </li><li class="heropanel-navListItem">
-            <a class="heropanel-navListItem-link" href="#toolcards">Fiches pratiques</a>
+            <a class="heropanel-navListItem-link" href="fiches.php">Fiches pratiques</a>
         </li>
         <li class="heropanel-navListItem">
             <a class="heropanel-navListItem-link" href="formulaire.php">Contact</a>
@@ -292,10 +292,10 @@ $db = new Database();
                     Voyages !</p>
             </div>
             <div class="six columns toolcard-image">
-                <img src="assets/images/toolcard.jpg" alt="man reading paper">
+                <a href="fiches.php"><img src="assets/images/toolcard.jpg" alt="man reading paper"></a>
             </div>
         </div>
-        <div class="top-link toolcard-link"><a href="#">Voir plus</a></div>
+        <div class="top-link toolcard-link"><a href="fiches.php">Voir plus</a></div>
     </div>
 </section>
 

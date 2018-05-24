@@ -1,0 +1,97 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  z-index: -1;
+  margin: 0;
+}
+
+.home-boldText {
+  font-weight: 500;
+}
+
+.home-lilText {
+  width: 200px;
+  text-transform: uppercase;
+  height: 40px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 42%;
+  left: 8vh;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 1rem;
+  top: 45vh;
+}
+
+.home-Title {
+  font-size: 10rem;
+  color: white;
+  position: absolute;
+  left: 8vh;
+  /*top: 50%; */
+  margin-top: 50vh;
+}
+
+.fichesBackground {
+  background: url("../images/fiches.jpg") no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.fichesPratiques {
+  margin-top: 20px;
+}
+
+.line-text {
+  border-bottom: 3px solid red;
+}
+
+.content {
+  width: 75%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.fiches-name {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.fiches-text {
+  text-align: center;
+  padding: 5px 20px;
+  top: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.fiches-name {
+  text-align: center;
+}
+
+.plus {
+  width: 300px;
+}
+
+.title {
+  font-size: 45px;
+  font-family: "Ubuntu", sans-serif;
+  margin-top: 100px;
+}
+
+.fiches-btn {
+  font-size: 18px;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 1rem;
+  margin-top: 50%;
+}
