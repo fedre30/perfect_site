@@ -18,6 +18,8 @@ $article = $db->getArticleID($id);
 <h3 class="admin-subtitle">Modifier une page</h3>
 
 <form method="post" action="doedit.php" class="pages-form" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<?= $id ?>" />
+
     <div class="row">
         <div class="six columns">
             <label>Title</label>
@@ -38,7 +40,8 @@ $article = $db->getArticleID($id);
 
     <div class="row">
         <div class="six columns">
-            <label>Logo</label>
+            <label>Logo (optional)</label>
+            <img src="/uploads/<?= $article['logo_img'] ?>" width="100">
             <input class="u-full-width" name="logo_img" type="file">
         </div>
         <div class="six columns">
@@ -49,7 +52,8 @@ $article = $db->getArticleID($id);
 
     <div class="row">
         <div class="six columns">
-            <label>Image</label>
+            <label>Image (optional)</label>
+            <img src="/uploads/<?= $article['img_src'] ?>" width="100">
             <input class="u-full-width" name="img_src" type="file">
         </div>
         <div class="six columns">

@@ -3,14 +3,21 @@
 function get_unique_filename(string $filename): string {
 	if (file_exists($filename)) {
 		$pathInfo = pathinfo($filename);
-		return $pathInfo['dirname'] . DIRECTORY_SEPARATOR . $pathInfo['filename'] . '_1.' . $pathInfo['extension'];
+		return get_unique_filename($pathInfo['dirname'] . DIRECTORY_SEPARATOR . $pathInfo['filename'] . '_1.' . $pathInfo['extension']);
 	} else {
 		return $filename;
 	}
 }
 
 function upload_file(string $field_name, string $destination) {
+	if (!isset($_FILES[$field_name])) {
+		return false;
+	}
 	$file = $_FILES[$field_name];
+
+	if (!isset($file["tmp_name"]) or strlen(trim($file["tmp_name"])) == 0) {
+		return false;
+	}
 
 	if ($destination[strlen($destination) - 1] != DIRECTORY_SEPARATOR) {
 		$destination .= DIRECTORY_SEPARATOR;
@@ -29,8 +36,6 @@ function upload_file(string $field_name, string $destination) {
 	}
 
 	$image_file_extension = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-	var_dump($target_file);
-	var_dump($image_file_extension);
 	if($image_file_extension != "jpg" && $image_file_extension != "png" && $image_file_extension != "jpeg" && $image_file_extension != "gif" ) {
 		echo "Only JPG, JPEG, PNG & GIF files are allowed for images.";
 		return false;

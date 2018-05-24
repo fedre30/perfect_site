@@ -23,7 +23,6 @@ $db = new Database();
     </div>
 </header>
 <section class="heropanel">
-
     <div class="heropanel-logo">
         <a href="/"><img src="assets/images/logo_black.png" alt="logo"></a>
     </div>
@@ -254,7 +253,7 @@ $db = new Database();
 
 <!-- SPONSORS -->
 
-<div class="container sponsor" id="#sponsors">
+<div class="container sponsor" id="sponsors">
     <div class="top-title-container">
         <h2 class="top-title">Partenaires</h2>
         <div class="dot"><img src="assets/images/dot.png"></div>
@@ -272,23 +271,6 @@ $db = new Database();
     </div>
 </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-left">
-        <div class="footer-logo">
-            <img src="assets/images/logo_black.png" alt="logo">
-        </div>
-        <div class="footer-copyright">© Copyright 2018. All rights reserved.</div>
-    </div>
-    <div class="footer-social">
-        <div class="social-item"><a href="#"><img src="assets/images/youtube-rounded-square-logo.png"
-                                                  alt="youtube logo"></a></div>
-        <div class="social-item"><a href="#"><img src="assets/images/instagram.png" alt="instagram logo"></a></div>
-        <div class="social-item"><a href="#"><img src="assets/images/twitter-logo-silhouette.png"
-                                                  alt="twitter logo"></a></div>
-        <div class="social-item"><a href="#"><img src="assets/images/facebook-logo.png" alt="facebook logo"></a></div>
-    </div>
 
-</footer>
 
 <?php include_once '../src/frontoffice/footer.php'; ?>

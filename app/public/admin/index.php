@@ -10,8 +10,8 @@ if(isAuthenticated()){
 }
 
 ?>
-
-<form action="/admin/" method="post">
+<h2 class="back-title">Login</h2>
+<form action="/admin/" method="post" class="login">
 	<input name="username" type="text" placeholder="username">
 	<input name="password" type="password" placeholder="password">
 	<input type="submit">

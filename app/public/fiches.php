@@ -6,6 +6,7 @@ require_once '../src/admin/init.php';
 
     <section class="home fichesBackground">
         <?php include 'navbar.php'?>
+
         <div class="container">
             <div class="row">
 

@@ -14,7 +14,7 @@ $article = $db->getArticleID($id);
 ?>
 
 
-<form method="post" action="dodelete.php" class="pages-form">
+<form method="post" action="dodelete.php" class="back-header">
 	<p>Voulez-vous vraiment supprimer la page <strong><?= $article['title']?></strong>?</p>
 	<input name="id" type="hidden" value="<?=$article['id']?>">
 	<input type="submit" value="OUI!" class="btn-danger">

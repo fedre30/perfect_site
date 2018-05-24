@@ -3,7 +3,7 @@
 const burger = document.querySelector('.header-burger');
 const menu = document.querySelector('.header-navList');
 const burgerImage = document.querySelector('.header-burger img');
-const fichesSection = document.querySelector('.fichesPratiques');
+const sectionNews = document.querySelector('.news');
 
 burger.addEventListener('click', function () {
 
@@ -19,7 +19,7 @@ burger.addEventListener('click', function () {
 });
 
 window.addEventListener('scroll', function () {
-   if(sectionNews.getBoundingClientRect().top < burger.offsetHeight || fichesSection.getBoundingClientRect().top < burger.offsetHeight) {
+   if(sectionNews.getBoundingClientRect().top < burger.offsetHeight) {
        burgerImage.src = 'assets/images/burger.png'
    }
    else{
@@ -30,7 +30,6 @@ window.addEventListener('scroll', function () {
 // MENU FIXED
 
 const heropanel = document.querySelector('.heropanel');
-const sectionNews = document.querySelector('.news');
 
 window.addEventListener('scroll', function () {
     if (sectionNews.getBoundingClientRect().top < heropanel.offsetHeight) {
@@ -49,7 +48,7 @@ const sectionCarousel = document.querySelector('#voyages');
 const sponsors = document.querySelector('#sponsors');
 
 window.addEventListener('scroll', function () {
-    if (sectionCarousel.getBoundingClientRect().top < popup.offsetHeight) {
+    if (sectionCarousel.getBoundingClientRect().top < popup.offsetHeight && sponsors.getBoundingClientRect().top > popup.offsetHeight) {
         popup.classList.add('popupOpen');
     }
 

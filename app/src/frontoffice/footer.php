@@ -1,3 +1,22 @@
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-left">
+        <div class="footer-logo">
+            <img src="assets/images/logo_black.png" alt="logo">
+        </div>
+        <div class="footer-copyright">© Copyright 2018. All rights reserved.</div>
+    </div>
+    <div class="footer-social">
+        <div class="social-item"><a href="#"><img src="assets/images/youtube-rounded-square-logo.png"
+                                                  alt="youtube logo"></a></div>
+        <div class="social-item"><a href="#"><img src="assets/images/instagram.png" alt="instagram logo"></a></div>
+        <div class="social-item"><a href="#"><img src="assets/images/twitter-logo-silhouette.png"
+                                                  alt="twitter logo"></a></div>
+        <div class="social-item"><a href="#"><img src="assets/images/facebook-logo.png" alt="facebook logo"></a></div>
+    </div>
+
+</footer>
+
 <!-- build:js scripts/main.min.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 <script src="/scripts/carousel.js"></script>
@@ -20,6 +39,5 @@
     ga('create', 'UA-XXXXX-X', 'auto');
     ga('send', 'pageview');
 </script>
-<!-- Built with love using Web Starter Kit -->
 </body>
 </html>

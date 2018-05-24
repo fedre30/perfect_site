@@ -13,20 +13,20 @@ require '../../src/admin/head.php';
 $id   = $_GET['id'];
 $article = $db->getArticleID($id)
 ?>
-<div>ID:<?= $article['id'] ?></div>
-<h2><span style="color: #ac2925">Titre: </span><?= $article['title'] ?></h2>
-<p><span >Subtitle: </span><?= $article['subtitle'] ?></p>
-<p><span >Image description: </span> <?= $article['img_alt'] ?></p>
-<p><span >Image source: </span> <img src="/uploads/<?= $article['img_src'] ?>" /></p>
-<p><span >Content: </span> <?= $article['content'] ?></p>
-<p><span >Logo: </span> <img src="/uploads/<?= $article['logo_img'] ?>" /></p>
-<p><span >Company: </span> <?= $article['company_name'] ?></p>
-</div>
+<div class="back-detail">ID:<?= $article['id'] ?></div>
+<h2 class="back-detail"><spanclass="back-span">Titre: </span><?= $article['title'] ?></h2>
+<div class="back-detail"><span class="back-span">Sous-titre: </span><?= $article['subtitle'] ?></div>
+<div class="back-detail"><span class="back-span">Description Image: </span> <?= $article['img_alt'] ?></div>
+<div class="back-image back-detail"><span class="back-span">Image source: </span> <img src="/uploads/<?= $article['img_src'] ?>" /></div>
+<div class="back-detail"><span class="back-span">Texte: </span> <?= $article['content'] ?></div>
+<div class="back-image back-detail"><span class="back-span">Logo: </span> <img src="/uploads/<?= $article['logo_img'] ?>" /></div>
+<div class="back-detail"><span class="back-span">Entreprise: </span> <?= $article['company_name'] ?></div>
+
 
 <div class="links-wrapper">
-	<a href="/admin/" class="show-link">Admin Homepage</a><br>
-	<a href="/admin/editArticle.php?id=<?= $article['id'] ?>" class="show-link">Edit page</a><br>
-	<a href="/admin/deleteArticle.php?id=<?= $article['id'] ?>" class="show-link">Delete page</a>
+	<a href="/admin/" class="back-link">Admin Homepage</a><br>
+	<a href="/admin/editArticle.php?id=<?= $article['id'] ?>" class="back-link">Modifier page</a><br>
+	<a href="/admin/deleteArticle.php?id=<?= $article['id'] ?>" class="back-link">Supprimer page</a>
 </div>
 
 <?php include '../../src/admin/footer.php' ?>

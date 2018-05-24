@@ -4,20 +4,22 @@
 
 function airlineView( $airline ) {
 	?>
-    <div class="row">
-        <div class="twelve columns news-card">
-            <div class="news-image">
-                <img src="/uploads/<?= $airline['logo_img'] ?>"/>
-            </div>
-            <div class="news-content">
-                <div class="news-title-container">
-                    <h3 class="news-title"><?= $airline['title'] ?></h3>
-                    <h4 class="news-subtitle"><?= $airline['subtitle'] ?></h4>
+    <a href="/article.php?id=<?= $airline['id'] ?>" style="color: black">
+        <div class="row">
+            <div class="twelve columns news-card">
+                <div class="news-image">
+                    <img src="/uploads/<?= $airline['logo_img'] ?>"/>
                 </div>
-                <p class="news-text"><?= $airline['content'] ?></p>
+                <div class="news-content">
+                    <div class="news-title-container">
+                        <h3 class="news-title"><?= $airline['title'] ?></h3>
+                        <h4 class="news-subtitle"><?= $airline['subtitle'] ?></h4>
+                    </div>
+                    <p class="news-text"><?= $airline['content'] ?></p>
+                </div>
             </div>
         </div>
-    </div>
+    </a>
 	<?php
 }
 
@@ -29,24 +31,26 @@ function airlineView( $airline ) {
 // HOTELS
 function hotelView( $hotel ) {
 	?>
-    <div class="card-container">
-        <div class="row">
+    <a href="/article.php?id=<?= $hotel['id'] ?>" style="color: black; text-decoration: none">
+        <div class="card-container">
+            <div class="row">
 
-            <div class="two columns">
-                <span class="number"><?php $hotel['id'] ?></span>
-            </div>
+                <div class="two columns">
+                    <span class="number"><?php $hotel['id'] ?></span>
+                </div>
 
-            <div class="seven columns top-text">
-                <h3><?= $hotel['title'] ?></h3>
-                <p><?= $hotel['content'] ?></p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-            </div>
+                <div class="seven columns top-text">
+                    <h3><?= $hotel['title'] ?></h3>
+                    <p><?= $hotel['content'] ?></p>
+                    <div class="top-link"><a href="#">Réserver</a></div>
+                </div>
 
-            <div class="three columns top-image">
-                <img src="/uploads/<?= $hotel['logo_img'] ?>">
+                <div class="three columns top-image">
+                    <img src="/uploads/<?= $hotel['logo_img'] ?>">
+                </div>
             </div>
         </div>
-    </div>
+    </a>
 <?php } ?>
 
 
@@ -56,24 +60,26 @@ function hotelView( $hotel ) {
 
 function restaurantView( $restaurant ) {
 	?>
-    <div class="card-container">
-        <div class="row">
+    <a href="/article.php?id=<?= $restaurant['id'] ?>" style="color: black; text-decoration: none">
+        <div class="card-container">
+            <div class="row">
 
-            <div class="two columns">
-                <span class="number"><?php $restaurant['id'] ?></span>
-            </div>
+                <div class="two columns">
+                    <span class="number"><?php $restaurant['id'] ?></span>
+                </div>
 
-            <div class="seven columns top-text">
-                <h3><?= $restaurant['title'] ?></h3>
-                <p><?= $restaurant['content'] ?></p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-            </div>
+                <div class="seven columns top-text">
+                    <h3><?= $restaurant['title'] ?></h3>
+                    <p><?= $restaurant['content'] ?></p>
+                    <div class="top-link"><a href="#">Réserver</a></div>
+                </div>
 
-            <div class="three columns top-image">
-                <img src="/uploads/<?= $restaurant['logo_img'] ?>">
+                <div class="three columns top-image">
+                    <img src="/uploads/<?= $restaurant['logo_img'] ?>">
+                </div>
             </div>
         </div>
-    </div>
+    </a>
 <?php } ?>
 
 <?php
@@ -82,24 +88,26 @@ function restaurantView( $restaurant ) {
 
 function spaView( $spa ) {
 	?>
-    <div class="card-container">
-        <div class="row">
+    <a href="/article.php?id=<?= $spa['id'] ?>" style="color: black; text-decoration: none">
+        <div class="card-container">
+            <div class="row">
 
-            <div class="two columns">
-                <span class="number"><?php $spa['id'] ?></span>
-            </div>
+                <div class="two columns">
+                    <span class="number"><?php $spa['id'] ?></span>
+                </div>
 
-            <div class="seven columns top-text">
-                <h3><?= $spa['title'] ?></h3>
-                <p><?= $spa['content'] ?></p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-            </div>
+                <div class="seven columns top-text">
+                    <h3><?= $spa['title'] ?></h3>
+                    <p><?= $spa['content'] ?></p>
+                    <div class="top-link"><a href="#">Réserver</a></div>
+                </div>
 
-            <div class="three columns top-image">
-                <img src="/uploads/<?= $spa['logo_img'] ?>">
+                <div class="three columns top-image">
+                    <img src="/uploads/<?= $spa['logo_img'] ?>">
+                </div>
             </div>
         </div>
-    </div>
+    </a>
 <?php } ?>
 
 <?php
@@ -107,29 +115,27 @@ function spaView( $spa ) {
 // CARDS
 
 function cardViewHotel( $hotel ) { ?>
-    <a href="../../public/article.php">
+    <a href="/article.php?id=<?= $hotel['id'] ?>" style="color: black">
         <div class="three columns">
-            <a href="">
-                <div class="content">
-                    <div class="imgContent">
-                        <a href=""><img src="/uploads/<?= $hotel['logo_img'] ?>" alt="<?= $hotel['img_alt'] ?>"></a>
-                    </div>
-                    <p class="fiches-name"><?= $hotel['title'] ?></p>
-                    <p class="fiches-text"><?= $hotel['content'] ?></p>
+            <div class="content">
+                <div class="imgContent">
+                    <img src="/uploads/<?= $hotel['logo_img'] ?>" alt="<?= $hotel['img_alt'] ?>">
                 </div>
-            </a>
+                <p class="fiches-name"><?= $hotel['title'] ?></p>
+                <p class="fiches-text"><?= $hotel['content'] ?></p>
+            </div>
         </div>
     </a>
 <?php } ?>
 <?php
 
 function cardViewRestaurant( $restaurant ) { ?>
-    <a href="../../public/article.php">
+    <a href="/article.php?id=<?= $restaurant['id'] ?>" style="color: black">
         <div class="three columns">
             <div class="content">
                 <div class="imgContent">
-                    <a href=""><img src="/uploads/<?= $restaurant['logo_img'] ?>"
-                                    alt="<?= $restaurant['img_alt'] ?>"></a>
+                    <img src="/uploads/<?= $restaurant['logo_img'] ?>"
+                         alt="<?= $restaurant['img_alt'] ?>">
                 </div>
                 <p class="fiches-name"><?= $restaurant['title'] ?></p>
                 <p class="fiches-text"><?= $restaurant['content'] ?></p>
@@ -142,11 +148,11 @@ function cardViewRestaurant( $restaurant ) { ?>
 <?php
 
 function cardViewBar( $bar ) { ?>
-    <a href="../../public/article.php">
+    <a href="/article.php?id=<?= $bar['id'] ?>" style="color: black">
         <div class="three columns">
             <div class="content">
                 <div class="imgContent">
-                    <a href=""><img src="/uploads/<?= $bar['logo_img'] ?>" alt="<?= $bar['img_alt'] ?>"></a>
+                    <img src="/uploads/<?= $bar['logo_img'] ?>" alt="<?= $bar['img_alt'] ?>">
                 </div>
                 <p class="fiches-name"><?= $bar['title'] ?></p>
                 <p class="fiches-text"><?= $bar['content'] ?></p>

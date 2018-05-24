@@ -34,7 +34,7 @@ class Database {
 			':content'      => $content,
 			':logo_img'     => $logo_img,
 			':company_name' => $company_name,
-			':category_id' => $category_id,
+			':category_id'  => $category_id,
 
 		] );
 
@@ -56,7 +56,10 @@ class Database {
 	}
 
 	function getArticleID( $id ) {
-		$stmt = $this->db->prepare( 'SELECT `id`, `title`, `subtitle`,`img_src`,`img_alt`,`content`,`logo_img`,`company_name` FROM `articles` WHERE `id` = :id' );
+		$stmt = $this->db->prepare( 'SELECT articles.id, `title`, `subtitle`,`img_src`,`img_alt`,`content`,`logo_img`,`company_name`, categories.name AS `category_name`
+			FROM `articles`
+			LEFT JOIN `categories` ON articles.category_id = categories.id
+			WHERE articles.id = :id' );
 		$stmt->execute( [
 			':id' => $id
 		] );
@@ -65,7 +68,7 @@ class Database {
 	}
 
 	function getCategoryByName( $name ) {
-		$stmt = $this->db->prepare( 'SELECT id FROM categories WHERE LOWER(name) LIKE LOWER(:name) LIMIT 1');
+		$stmt = $this->db->prepare( 'SELECT id FROM categories WHERE LOWER(name) LIKE LOWER(:name) LIMIT 1' );
 		$stmt->execute( [
 			':name' => $name
 		] );
@@ -74,7 +77,7 @@ class Database {
 	}
 
 	function getCategories( $page ) {
-		$stmt = $this->db->prepare( 'SELECT `name` FROM `categories` LIMIT 20 OFFSET :page' );
+		$stmt = $this->db->prepare( 'SELECT `id`, `name` FROM `categories` LIMIT 20 OFFSET :page' );
 		$stmt->bindValue( ':page', (int) $page, PDO::PARAM_INT );
 		$stmt->execute();
 
@@ -84,58 +87,64 @@ class Database {
 	function getArticlesInCategory( $page, $category_id ) {
 		$stmt = $this->db->prepare( 'SELECT * FROM `articles` WHERE `category_id` = :category_id LIMIT 20 OFFSET :page' );
 		$stmt->bindValue( ':page', (int) $page, PDO::PARAM_INT );
-		$stmt->bindValue( ':category_id', intval($category_id), PDO::PARAM_INT );
+		$stmt->bindValue( ':category_id', intval( $category_id ), PDO::PARAM_INT );
 		$stmt->execute();
 
 		return $stmt->fetchAll();
 	}
 
 	function getAirlines( $page ) {
-		return $this->getArticlesInCategory($page, $this->getCategoryByName('Compagnies aériennes')['id']);
+		return $this->getArticlesInCategory( $page, $this->getCategoryByName( 'Compagnies aériennes' )['id'] );
 	}
 
-	function getHotels($page){
-		return $this->getArticlesInCategory($page, $this->getCategoryByName('Hotels')['id']);
+	function getHotels( $page ) {
+		return $this->getArticlesInCategory( $page, $this->getCategoryByName( 'Hotels' )['id'] );
 	}
 
-	function getRestaurants($page){
-		return $this->getArticlesInCategory($page, $this->getCategoryByName('Restaurants')['id']);
+	function getRestaurants( $page ) {
+		return $this->getArticlesInCategory( $page, $this->getCategoryByName( 'Restaurants' )['id'] );
 	}
 
-	function getSpas($page){
-		return $this->getArticlesInCategory($page, $this->getCategoryByName('Spas')['id']);
+	function getSpas( $page ) {
+		return $this->getArticlesInCategory( $page, $this->getCategoryByName( 'Spas' )['id'] );
 	}
 
-	function getDiscounts($page){
-		return $this->getArticlesInCategory($page, $this->getCategoryByName('Bons plans')['id']);
+	function getDiscounts( $page ) {
+		return $this->getArticlesInCategory( $page, $this->getCategoryByName( 'Bons plans' )['id'] );
 	}
 
-	function getBars($page){
-		return $this->getArticlesInCategory($page, $this->getCategoryByName('Bars')['id']);
+	function getBars( $page ) {
+		return $this->getArticlesInCategory( $page, $this->getCategoryByName( 'Bars' )['id'] );
 	}
 
 
 	// UPDATE
 
 
-	function editArticle( $id, $title, $subtitle, $img_src, $img_alt, $content, $logo_img, $company_name ) {
-		$stmt = $this->db->prepare(
-			'UPDATE articles SET `title` = :title, `subtitle` = :subtitle, `img_alt`= :img_alt, `img_src`= :img_src, `content` = :content, `logo_img` = :logo_img, `company_name` = :company_name WHERE id = :id' );
-		$stmt->execute( [
+	function editArticle( $id, $title, $subtitle, $img_src, $img_alt, $content, $logo_img, $company_name, $category_id ) {
+		$params = [
 			':id'           => $id,
 			':title'        => $title,
 			':subtitle'     => $subtitle,
 			':img_alt'      => $img_alt,
-			':img_src'      => $img_src,
 			':content'      => $content,
-			':logo_img'     => $logo_img,
-			':company_name' => $company_name
-		] );
+			':company_name' => $company_name,
+		':category_id'      => $category_id
+		];
 
-		$result = $stmt->rowCount();
+		$query = 'UPDATE articles SET `title` = :title, `subtitle` = :subtitle, `img_alt`= :img_alt, `content` = :content, `company_name` = :company_name, `category_id` = :category_id';
+		if ($img_src != false) {
+			$query .= ', `img_src`= :img_src';
+			$params[':img_src'] = $img_src;
+		}
+		if ($logo_img != false) {
+			$query .= ', `logo_img`= :logo_img';
+			$params[':logo_img'] = $logo_img;
+		}
+		$query .= ' WHERE id = :id';
 
-		return $result === 1;
-
+		$stmt = $this->db->prepare( $query );
+		$stmt->execute( $params );
 	}
 
 	//DELETE
