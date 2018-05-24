@@ -1,4 +1,5 @@
 <!-- build:js scripts/main.min.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 <script src="/scripts/carousel.js"></script>
 <script src="/scripts/main.js"></script>
 <!-- endbuild -->

@@ -81,10 +81,10 @@ class Database {
 		return $stmt->fetchAll();
 	}
 
-	function getArticlesInCategory( $page, $categoryId ) {
+	function getArticlesInCategory( $page, $category_id ) {
 		$stmt = $this->db->prepare( 'SELECT * FROM `articles` WHERE `category_id` = :category_id LIMIT 20 OFFSET :page' );
 		$stmt->bindValue( ':page', (int) $page, PDO::PARAM_INT );
-		$stmt->bindValue( ':category_id', intval($categoryId), PDO::PARAM_INT );
+		$stmt->bindValue( ':category_id', intval($category_id), PDO::PARAM_INT );
 		$stmt->execute();
 
 		return $stmt->fetchAll();

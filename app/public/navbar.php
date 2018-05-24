@@ -8,13 +8,13 @@
         </div>
         <ul class="header-navList">
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="/#top">Top 100</a>
+                <a class="header-navListItem-link top-call" href="/#top">Top 100</a>
             </li>
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="/#voyages">Voyages</a>
+                <a class="header-navListItem-link voyages-call" href="/#voyages">Voyages</a>
             </li>
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="/#magazine">Magazine</a>
+                <a class="header-navListItem-link magazine-call" href="/#magazine">Magazine</a>
             </li>
             <li class="header-navListItem">
                 <a class="header-navListItem-link" href="fiches.php">Fiches pratiques</a>

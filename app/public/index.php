@@ -25,18 +25,18 @@ $db = new Database();
 <section class="heropanel">
 
     <div class="heropanel-logo">
-        <img src="assets/images/logo_black.png" alt="logo">
+        <a href="/"><img src="assets/images/logo_black.png" alt="logo"></a>
     </div>
 
     <ul class="heropanel-navList">
         <li class="heropanel-navListItem">
-            <a class="heropanel-navListItem-link" href="#top">Top 100</a>
+            <a class="heropanel-navListItem-link top-call" href="#top">Top 100</a>
         </li>
         <li class="heropanel-navListItem">
-            <a class="heropanel-navListItem-link" href="#voyages">Voyages</a>
+            <a class="heropanel-navListItem-link voyages-call" href="#voyages">Voyages</a>
         </li>
         <li class="heropanel-navListItem">
-            <a class="heropanel-navListItem-link" href="#magazine">Magazine</a>
+            <a class="heropanel-navListItem-link magazine-call" href="#magazine">Magazine</a>
         </li><li class="heropanel-navListItem">
             <a class="heropanel-navListItem-link" href="fiches.php">Fiches pratiques</a>
         </li>

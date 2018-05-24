@@ -20,10 +20,10 @@ burger.addEventListener('click', function () {
 // MENU FIXED
 
 const heropanel = document.querySelector('.heropanel');
-const sectionTop = document.querySelector('.news');
+const sectionNews = document.querySelector('.news');
 
 window.addEventListener('scroll', function () {
-    if (sectionTop.getBoundingClientRect().top < heropanel.offsetHeight) {
+    if (sectionNews.getBoundingClientRect().top < heropanel.offsetHeight) {
         heropanel.classList.add('active');
     }
 
@@ -47,4 +47,47 @@ window.addEventListener('scroll', function () {
         popup.classList.remove('popupOpen');
     }
 });
+
+// SMOOTH SCROLL
+
+
+const sectionTop = document.querySelector('#top');
+const topCall = document.querySelector('.top-call');
+const sectionVoyages = document.querySelector('#voyages');
+const voyagesCall = document.querySelector('.voyages-call');
+const magazineCall = document.querySelector('.magazine-call');
+const sectionMagazine = document.querySelector('#magazine');
+
+function animate(time) {
+    requestAnimationFrame(animate);
+    TWEEN.update(time);
+}
+
+requestAnimationFrame(animate);
+
+function tweenAnimation (section){
+    const position = {y: window.scrollY};
+    const tween = new TWEEN.Tween(position)
+        .to({y: section.getBoundingClientRect().top})
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .onUpdate(function () {
+            console.log('coucou');
+            window.scroll(window.scrollX, position.y);
+        })
+        .start();
+}
+
+topCall.addEventListener('click', function () {
+    tweenAnimation(sectionTop);
+});
+
+voyagesCall.addEventListener('click', function () {
+    tweenAnimation(sectionVoyages);
+});
+
+magazineCall.addEventListener('click', function () {
+    tweenAnimation(sectionMagazine);
+});
+
+
 
