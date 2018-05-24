@@ -13,7 +13,7 @@ if(isAuthenticated()){
 
 <form action="/admin/" method="post">
 	<input name="username" type="text" placeholder="username">
-	<input name="password" type="text" placeholder="password">
+	<input name="password" type="password" placeholder="password">
 	<input type="submit">
 </form>
 

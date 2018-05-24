@@ -168,7 +168,7 @@ body
 
 .popupOpen
   opacity: 1
-  @media (min-width: 768px)
+  @media (max-width: 768px)
     opacity: 0
 
 
@@ -536,6 +536,26 @@ img
 .article
   background: url("../images/dave-contreras-190480-unsplash.jpg")
   background-size: cover
+  &-title
+    font-size: 5rem
+    margin: 3rem 0
+  &-subtitle
+    font-size: 3rem
+    margin-bottom: 2rem
+
+  &-signature
+    width: 50vw
+    display: flex
+    margin: 0 auto
+
+
+  &-logo
+    width: 300px
+    img
+      width: 100%
+
+  &-company
+    font-size: 3rem
 
 
 

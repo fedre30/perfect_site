@@ -4,6 +4,7 @@
 
 <section class="home fichesBackground-contact">
     <div class="container-contact">
+	    <?php include 'navbar.php' ?>
         <div class="row">
 
             <div class="twelve columns">

@@ -104,7 +104,58 @@ function spaView( $spa ) {
 
 <?php
 
+// CARDS
 
+function cardViewHotel( $hotel ) { ?>
+    <a href="../../public/article.php">
+        <div class="three columns">
+            <a href="">
+                <div class="content">
+                    <div class="imgContent">
+                        <a href=""><img src="/uploads/<?= $hotel['logo_img'] ?>" alt="<?= $hotel['img_alt'] ?>"></a>
+                    </div>
+                    <p class="fiches-name"><?= $hotel['title'] ?></p>
+                    <p class="fiches-text"><?= $hotel['content'] ?></p>
+                </div>
+            </a>
+        </div>
+    </a>
+<?php } ?>
+<?php
+
+function cardViewRestaurant( $restaurant ) { ?>
+    <a href="../../public/article.php">
+        <div class="three columns">
+            <div class="content">
+                <div class="imgContent">
+                    <a href=""><img src="/uploads/<?= $restaurant['logo_img'] ?>"
+                                    alt="<?= $restaurant['img_alt'] ?>"></a>
+                </div>
+                <p class="fiches-name"><?= $restaurant['title'] ?></p>
+                <p class="fiches-text"><?= $restaurant['content'] ?></p>
+            </div>
+        </div>
+    </a>
+<?php } ?>
+
+
+<?php
+
+function cardViewBar( $bar ) { ?>
+    <a href="../../public/article.php">
+        <div class="three columns">
+            <div class="content">
+                <div class="imgContent">
+                    <a href=""><img src="/uploads/<?= $bar['logo_img'] ?>" alt="<?= $bar['img_alt'] ?>"></a>
+                </div>
+                <p class="fiches-name"><?= $bar['title'] ?></p>
+                <p class="fiches-text"><?= $bar['content'] ?></p>
+            </div>
+        </div>
+    </a>
+<?php } ?>
+
+<?php
 //ARTICLE
 
 function articleView( $article ) { ?>

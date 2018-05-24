@@ -110,6 +110,10 @@ class Database {
 		return $this->getArticlesInCategory($page, $this->getCategoryByName('Bons plans')['id']);
 	}
 
+	function getBars($page){
+		return $this->getArticlesInCategory($page, $this->getCategoryByName('Bars')['id']);
+	}
+
 
 	// UPDATE
 

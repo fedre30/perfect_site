@@ -264,7 +264,7 @@ body {
 
 .popupOpen {
   opacity: 1; }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     .popupOpen {
       opacity: 0; } }
 
@@ -599,5 +599,21 @@ img {
 .article {
   background: url("../images/dave-contreras-190480-unsplash.jpg");
   background-size: cover; }
+  .article-title {
+    font-size: 5rem;
+    margin: 3rem 0; }
+  .article-subtitle {
+    font-size: 3rem;
+    margin-bottom: 2rem; }
+  .article-signature {
+    width: 50vw;
+    display: flex;
+    margin: 0 auto; }
+  .article-logo {
+    width: 300px; }
+    .article-logo img {
+      width: 100%; }
+  .article-company {
+    font-size: 3rem; }
 
 /*# sourceMappingURL=main.css.map */

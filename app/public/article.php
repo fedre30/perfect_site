@@ -46,7 +46,24 @@ $db = new Database();
 	</ul>
 </section>
 
-<?php articleView($article)?>
+<!-- TO BE INTEGRATED -->
+
+    <div class="container">
+        <div class="article-title">Title</div>
+        <div class="article-subtitle">subtitle</div>
+        <div class="row">
+            <div class="six columns">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, architecto dignissimos esse exercitationem, illo impedit in ipsa maiores molestias nesciunt nulla possimus reiciendis sed tenetur ullam voluptate voluptatibus? At, vitae.</div>
+            <div class="six columns">
+                <img src="assets/images/johannes-waibel-4298-unsplash.jpg" alt="">
+            </div>
+        </div>
+        <div class="article-signature">
+            <div class="article-company">Company</div>
+            <div class="article-logo"><img src="assets/images/paris_airport.png" alt=""></div>
+        </div>
+    </div>
+
+<!-- TO BE INTEGRATED -->
 
 
 	<!-- FOOTER -->

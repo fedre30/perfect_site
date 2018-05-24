@@ -36,7 +36,6 @@ if(isAuthenticated()){
 	}
 
 	if ( $db->addArticle( $title, $subtitle, $image_path, $img_alt, $content, $logo_path, $company_name, $category_id ) ) {
-		var_dump($db->addArticle( $title, $subtitle, $image_path, $img_alt, $content, $logo_path, $company_name, $category_id ));
 		$db->redirectToLogin();
 	}
 }

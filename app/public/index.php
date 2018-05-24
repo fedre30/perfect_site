@@ -51,54 +51,6 @@ $db = new Database();
 <section class="news container">
     <div class="row">
         <div class="nine columns">
-            <div class="row">
-                <div class="twelve columns news-card">
-                    <div class="news-image">
-                        <img src="assets/images/logo-british-airways.png">
-                    </div>
-                    <div class="news-content">
-                        <div class="news-title-container">
-                            <h3 class="news-title">Title</h3>
-                            <h4 class="news-subtitle">Subtitle</h4>
-                        </div>
-                        <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ducimus
-                            fugit maxime modi porro quas quod veniam! At consectetur earum est, exercitationem mollitia
-                            nobis nostrum similique soluta tempora ut voluptatem.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="twelve columns news-card">
-                    <div class="news-image">
-                        <img src="assets/images/monogramme_af.png">
-                    </div>
-                    <div class="news-content">
-                        <div class="news-title-container">
-                            <h3 class="news-title">Title</h3>
-                            <h4 class="news-subtitle">Subtitle</h4>
-                        </div>
-                        <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ducimus
-                            fugit maxime modi porro quas quod veniam! At consectetur earum est, exercitationem mollitia
-                            nobis nostrum similique soluta tempora ut voluptatem.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="twelve columns news-card">
-                    <div class="news-image">
-                        <img src="assets/images/emirates-airlines-logo-01.png">
-                    </div>
-                    <div class="news-content">
-                        <div class="news-title-container">
-                            <h3 class="news-title">Title</h3>
-                            <h4 class="news-subtitle">Subtitle</h4>
-                        </div>
-                        <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ducimus
-                            fugit maxime modi porro quas quod veniam! At consectetur earum est, exercitationem mollitia
-                            nobis nostrum similique soluta tempora ut voluptatem.</p>
-                    </div>
-                </div>
-            </div>
 
 			<?php foreach ( $db->getAirlines( 0 ) as $airline ) {
 				airlineView( $airline );
@@ -169,7 +121,8 @@ $db = new Database();
 <div class="popup">
     <img src="assets/images/Popup.png" alt="">
     <h3>News!</h3>
-    <p>Lorem ipsum</p>
+    <p>Découvrez les nouveaux bons plans!<br> <a href="#">Voir plus</a></p>
+
 </div>
 
 <!-- CAROUSEL -->
