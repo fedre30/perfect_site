@@ -17,7 +17,7 @@ if(isAuthenticated()){
 	$title        = htmlentities( $_POST['title'] );
 	$subtitle     = htmlentities( $_POST['subtitle'] );
 	$img_alt      = htmlentities( $_POST['img_alt'] );
-	$content      = htmlentities( $_POST['content'] );
+	$content      = nl2br(htmlentities( $_POST['content'] ));
 	$company_name = htmlentities( $_POST['company_name'] );
 	$category_id  = intval( $_POST['category_id'] );
 
