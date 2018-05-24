@@ -44,7 +44,7 @@ function hotelView($hotel)
               </div>
 
               <div class="three columns top-image">
-                <img src="/uploads/<?= $hotel['logo_img'] ?>['logo_img']">
+                <img src="/uploads/<?= $hotel['logo_img'] ?>">
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ function restaurantView($restaurant)
               </div>
 
               <div class="three columns top-image">
-                <img src="/uploads/<?= $restaurant['logo_img'] ?>['logo_img']">
+                <img src="/uploads/<?= $restaurant['logo_img'] ?>">
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ function spaView($spa)
             </div>
 
             <div class="three columns top-image">
-                <img src="/uploads/<?= $spa['logo_img'] ?>['logo_img']">
+                <img src="/uploads/<?= $spa['logo_img'] ?>">
             </div>
         </div>
     </div>

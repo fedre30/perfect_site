@@ -7,10 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Une année de voyages</title>
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-	<link rel="canonical" href="http://www.example.com/">
-	-->
+    <!-- SEO-->
+    <!-- HTML Meta Tags -->
+    <title>Une Année De Voyages</title>
+    <meta name="description" content="">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Une Année De Voyages">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://uneanneedevoyages.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Une Année De Voyages">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Une Année De Voyages">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
 
 
     <!-- Your styles -->
