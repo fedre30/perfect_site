@@ -1,4 +1,5 @@
-<div class="">
+
+<?php include_once '../src/frontoffice/header.php'; ?>
 
 
     <div class="contact">
@@ -47,3 +48,5 @@
         </div>
       </div>
     </div>
+
+<?php include_once '../src/frontoffice/footer.php'; ?>

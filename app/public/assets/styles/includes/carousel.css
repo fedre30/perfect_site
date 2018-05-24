@@ -18,6 +18,7 @@ url('font/Ubuntu-Regular') format ('ttf');
     font-size: 0;
     overflow-y: hidden;
     white-space: nowrap;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .carousel .slide {
@@ -76,7 +77,7 @@ url('font/Ubuntu-Regular') format ('ttf');
 }
 
 .carousel .oval span {
-    font-family: sans-serif;
+    font-family: "Ubuntu", sans-serif;
     display: flex;
     font-size: 3vh;
     margin: 10% 0 0 20%;

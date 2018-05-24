@@ -1,7 +1,7 @@
 <?php include '../src/frontoffice/header.php' ?>d>
 
 <body>
-  <section class="home">
+  <section class="home hotelBackground">
 	  <?php include 'navbar.php'?>
     <div class="container">
       <div class="row">

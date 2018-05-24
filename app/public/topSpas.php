@@ -1,6 +1,6 @@
 <?php include '../src/frontoffice/header.php' ?>
 <body>
-  <section class="home">
+  <section class="home spasBackground">
 	  <?php include 'navbar.php'?>
     <div class="container">
       <div class="row">

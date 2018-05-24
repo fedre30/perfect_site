@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="header-logo">
-        <img class="header-logoImg" src="assets/images/logo.png" alt="">
+        <a href="/"><img class="header-logoImg" src="assets/images/logo.png" alt=""></a>
     </div>
     <nav>
         <div class="header-burger">
@@ -8,7 +8,7 @@
         </div>
         <ul class="header-navList">
             <li class="header-navListItem">
-                <a class="header-navListItem-link submenu-header" href="#">Top 100</a>
+                <a class="header-navListItem-link submenu-header" href="topRestos.php">Top 100</a>
                 <ul class="top-submenu">
                     <li class="submenu-item"><a href="">Hotels</a></li>
                     <li class="submenu-item"><a href="">Restaurants</a></li>
@@ -22,7 +22,7 @@
                 <a class="header-navListItem-link" href="#">Adresses</a>
             </li>
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="#">Contacts</a>
+                <a class="header-navListItem-link" href="formulaire.php">Contacts</a>
             </li>
         </ul>
     </nav>
