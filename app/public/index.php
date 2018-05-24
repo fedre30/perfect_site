@@ -25,7 +25,7 @@ $db = new Database();
 <section class="heropanel">
 
     <div class="heropanel-logo">
-        <img src="assets/images/logo_black.png" alt="">
+        <img src="assets/images/logo_black.png" alt="logo">
     </div>
 
     <ul class="heropanel-navList">

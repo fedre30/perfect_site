@@ -17,7 +17,7 @@
                 <a class="header-navListItem-link" href="/#magazine">Magazine</a>
             </li>
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="/#toolcards">Fiches pratiques</a>
+                <a class="header-navListItem-link" href="fiches.php">Fiches pratiques</a>
             </li>
             <li class="header-navListItem">
                 <a class="header-navListItem-link" href="formulaire.php">Contact</a>

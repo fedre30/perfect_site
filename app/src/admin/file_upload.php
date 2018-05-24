@@ -23,7 +23,7 @@ function upload_file(string $field_name, string $destination) {
 	}
 
 	$target_file = get_unique_filename($target_file);
-	if ($file["size"] > 500 * 1024) { // 500kB
+	if ($file["size"] > 2000 * 1024) {
 		echo "Sorry, your file is too large to be uploaded.";
 		return false;
 	}

@@ -1,405 +1,45 @@
-<?php include '../src/frontoffice/header.php' ?>
-<body>
-  <section class="home spasBackground">
-	  <?php include 'navbar.php'?>
-    <div class="container">
-      <div class="row">
+<?php include '../src/frontoffice/header.php';
+require_once '../src/db.php';
+require_once '../src/frontoffice/views.php';
+require_once '../src/admin/init.php';
+?>
 
-        <div class="twelve columns">
+    <section class="home spasBackground">
+		<?php include 'navbar.php' ?>
+        <div class="container">
+            <div class="row">
 
-          <div class="home-backgroundText">
-            <span class="home-lilText">GUIDE DE VOYAGE</span>
-          </div>
+                <div class="twelve columns">
+
+                    <div class="home-backgroundText">
+                        <span class="home-lilText">GUIDE DE VOYAGE</span>
+                    </div>
+                </div>
+
+                <div class="six columns">
+                    <h1 class="home-Title">Meilleurs <span class="home-boldText">Spas & Thalassos.</span></h1>
+                </div>
+            </div>
         </div>
-
-        <div class="six columns">
-          <h1 class="home-Title">Meilleurs <span class="home-boldText">Spas & Thalassos.</span></h1>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
 
+    <section class="list">
 
-  <section class="list">
-
-    <div class="top container">
-
-      <div class="row">
-        <div class="twelve columns">
-          <div class="top-title-container">
-            <h2 class="top-title">Top 100</h2>
-          </div>
-
-          <div class="card-container">
+        <div class="top container">
             <div class="row">
-
-              <div class="two columns">
-                <span class="number">1</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop bien</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
+                <div class="twelve columns">
+					<?php foreach ( $db->getSpas( 0 ) as $spa ) {
+						spaView( $spa );
+					} ?>
+                </div>
             </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">2</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop cool</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/island.jpg">
-              </div>
-
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">3</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa sympa</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
-
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">4</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop bien</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/island.jpg">
-              </div>
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">5</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop cool</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
-
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">6</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa sympa</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/island.jpg">
-              </div>
-
-            </div>
-          </div>
-
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">7</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop bien</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">8</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop cool</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/island.jpg">
-              </div>
-
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">9</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa sympa</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
-
-            </div>
-          </div>
-
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">10</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop bien</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/island.jpg">
-              </div>
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">11</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop cool</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
-
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">12</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa sympa</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/island.jpg">
-              </div>
-
-            </div>
-          </div>
-
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">13</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop bien</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">14</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop cool</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
-
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">15</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa sympa</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/island.jpg">
-              </div>
-
-            </div>
-          </div>
-
-
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">16</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop bien</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">17</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa trop cool</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/island.jpg">
-              </div>
-
-            </div>
-          </div>
-
-          <div class="card-container">
-            <div class="row">
-
-              <div class="two columns">
-                <span class="number">18</span>
-              </div>
-
-              <div class="seven columns top-text">
-                <h3>Spa sympa</h3>
-                <p>Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V Découvrez une selection des 100 meilleurs thalassos selon les critères de U.A.D.V.</p>
-                <div class="top-link"><a href="#">Réserver</a></div>
-              </div>
-
-              <div class="three columns top-image">
-                <img src="img/toolcard.jpg">
-              </div>
-
-            </div>
-          </div>
-
 
         </div>
 
         <div class="twelve columns btn-contain">
-          <button class="list-btn" type="button" name="button">Charger plus</button>
+            <button class="list-btn" type="button" name="button">Charger plus</button>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-
+    </section>
 <?php include_once '../src/frontoffice/footer.php'; ?>
