@@ -2,10 +2,13 @@
 require '../../src/db.php';
 require '../../src/admin/init.php';
 
-if(isset($_POST['id'])){
-	$id = htmlentities($_POST['id']);
-}
+if(isAuthenticated()){
 
-if ($db->deleteArticle($id)) {
-	$db->redirectToLogin();
+	if(isset($_POST['id'])){
+		$id = htmlentities($_POST['id']);
+	}
+
+	if ($db->deleteArticle($id)) {
+		$db->redirectToLogin();
+	}
 }

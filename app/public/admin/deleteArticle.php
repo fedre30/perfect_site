@@ -13,6 +13,7 @@ $id = $_GET['id'];
 $article = $db->getArticleID($id);
 ?>
 
+
 <form method="post" action="dodelete.php" class="pages-form">
 	<p>Voulez-vous vraiment supprimer la page <strong><?= $article['title']?></strong>?</p>
 	<input name="id" type="hidden" value="<?=$article['id']?>">

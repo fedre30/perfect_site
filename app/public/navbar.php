@@ -8,21 +8,19 @@
         </div>
         <ul class="header-navList">
             <li class="header-navListItem">
-                <a class="header-navListItem-link submenu-header" href="topRestos.php">Top 100</a>
-                <ul class="top-submenu">
-                    <li class="submenu-item"><a href="">Hotels</a></li>
-                    <li class="submenu-item"><a href="">Restaurants</a></li>
-                    <li class="submenu-item"><a href="">Spas</a></li>
-                </ul>
+                <a class="header-navListItem-link" href="/#top">Top 100</a>
             </li>
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="#">Voyages</a>
+                <a class="header-navListItem-link" href="/#voyages">Voyages</a>
             </li>
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="#">Adresses</a>
+                <a class="header-navListItem-link" href="/#magazine">Magazine</a>
             </li>
             <li class="header-navListItem">
-                <a class="header-navListItem-link" href="formulaire.php">Contacts</a>
+                <a class="header-navListItem-link" href="/#toolcards">Fiches pratiques</a>
+            </li>
+            <li class="header-navListItem">
+                <a class="header-navListItem-link" href="formulaire.php">Contact</a>
             </li>
         </ul>
     </nav>

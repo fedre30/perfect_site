@@ -30,16 +30,18 @@ $db = new Database();
 
     <ul class="heropanel-navList">
         <li class="heropanel-navListItem">
-            <a class="heropanel-navListItem-link" href="topRestos.php">Top 100</a>
+            <a class="heropanel-navListItem-link" href="#top">Top 100</a>
         </li>
         <li class="heropanel-navListItem">
-            <a class="heropanel-navListItem-link" href="#">Voyages</a>
+            <a class="heropanel-navListItem-link" href="#voyages">Voyages</a>
         </li>
         <li class="heropanel-navListItem">
-            <a class="heropanel-navListItem-link" href="#">Adresses</a>
+            <a class="heropanel-navListItem-link" href="#magazine">Magazine</a>
+        </li><li class="heropanel-navListItem">
+            <a class="heropanel-navListItem-link" href="#toolcards">Fiches pratiques</a>
         </li>
         <li class="heropanel-navListItem">
-            <a class="heropanel-navListItem-link" href="#">Contacts</a>
+            <a class="heropanel-navListItem-link" href="formulaire.php">Contact</a>
         </li>
     </ul>
 </section>
@@ -64,7 +66,8 @@ $db = new Database();
                             nobis nostrum similique soluta tempora ut voluptatem.</p>
                     </div>
                 </div>
-            </div><div class="row">
+            </div>
+            <div class="row">
                 <div class="twelve columns news-card">
                     <div class="news-image">
                         <img src="assets/images/monogramme_af.png">
@@ -79,7 +82,8 @@ $db = new Database();
                             nobis nostrum similique soluta tempora ut voluptatem.</p>
                     </div>
                 </div>
-            </div><div class="row">
+            </div>
+            <div class="row">
                 <div class="twelve columns news-card">
                     <div class="news-image">
                         <img src="assets/images/emirates-airlines-logo-01.png">
@@ -96,7 +100,9 @@ $db = new Database();
                 </div>
             </div>
 
-            <?php foreach ($db->getAirlines(0) as $airline) { airlineView($airline); } ?>
+			<?php foreach ( $db->getAirlines( 0 ) as $airline ) {
+				airlineView( $airline );
+			} ?>
         </div>
 
         <div class="three columns twitter"><a class="twitter-timeline" data-width="400" data-height="980"
@@ -108,7 +114,7 @@ $db = new Database();
 </section>
 
 <!-- TOP 100 SECTION -->
-<section class="top container">
+<section class="top container" id="top">
     <div class="row">
         <div class="twelve columns">
             <div class="top-title-container">
@@ -121,10 +127,10 @@ $db = new Database();
                         <h3>Meilleurs <span class="bold">Hôtels</span></h3>
                         <p>Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V
                             Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V.</p>
-                        <div class="top-link"><a href="#">Voir plus</a></div>
+                        <div class="top-link"><a href="topHotels.php">Voir plus</a></div>
                     </div>
                     <div class="three columns top-image">
-                        <a href="#"><img src="assets/images/island.jpg"></a>
+                        <a href="topHotels.php"><img src="assets/images/island.jpg"></a>
                     </div>
                 </div>
             </div>
@@ -134,10 +140,10 @@ $db = new Database();
                         <h3>Meilleurs <span class="bold">Restaurants</span></h3>
                         <p>Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V
                             Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V.</p>
-                        <div class="top-link"><a href="#">Voir plus</a></div>
+                        <div class="top-link"><a href="topRestos.php">Voir plus</a></div>
                     </div>
                     <div class="three columns top-image">
-                        <a href="#"><img src="assets/images/resto.jpg"></a>
+                        <a href="topRestos.php"><img src="assets/images/resto.jpg"></a>
                     </div>
                 </div>
             </div>
@@ -147,10 +153,10 @@ $db = new Database();
                         <h3>Meilleurs <span class="bold">Spas</span></h3>
                         <p>Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V
                             Découvrez une selection des 100 meilleurs hôtels selon les critères de U.A.D.V.</p>
-                        <div class="top-link"><a href="#">Voir plus</a></div>
+                        <div class="top-link"><a href="topSpas.php">Voir plus</a></div>
                     </div>
                     <div class="three columns top-image">
-                        <a href="#"><img src="assets/images/spa.jpg"></a>
+                        <a href="topSpas.php"><img src="assets/images/spa.jpg"></a>
                     </div>
                 </div>
             </div>
@@ -158,9 +164,17 @@ $db = new Database();
     </div>
 </section>
 
+<!-- POPUP -->
+
+<div class="popup">
+    <img src="assets/images/Popup.png" alt="">
+    <h3>News!</h3>
+    <p>Lorem ipsum</p>
+</div>
+
 <!-- CAROUSEL -->
 
-<section class="voyages">
+<section class="voyages" id="voyages">
     <div class="container">
         <div class="row">
             <div class="top-title-container">
@@ -208,7 +222,7 @@ $db = new Database();
 </section>
 
 <!-- MAGAZINE -->
-<section class="magazine">
+<section class="magazine" id="magazine">
     <div class="container">
         <div class="top-title-container">
             <h2 class="top-title">Magazine</h2>
@@ -261,7 +275,7 @@ $db = new Database();
 </section>
 
 <!-- TOOLCARDS -->
-<section class="toolcard">
+<section class="toolcard" id="toolcards">
     <div class="container">
         <div class="top-title-container">
             <h2 class="top-title">Fiches pratiques</h2>
@@ -284,6 +298,26 @@ $db = new Database();
         <div class="top-link toolcard-link"><a href="#">Voir plus</a></div>
     </div>
 </section>
+
+<!-- SPONSORS -->
+
+<div class="container sponsor" id="#sponsors">
+    <div class="top-title-container">
+        <h2 class="top-title">Partenaires</h2>
+        <div class="dot"><img src="assets/images/dot.png"></div>
+    </div>
+    <div class="row">
+        <div class="four columns sponsor-card">
+            <div class="sponsor-image"><img src="assets/images/nikon.png" alt="Nikon"></div>
+        </div>
+        <div class="four columns sponsor-card">
+            <div class="sponsor-image"><img src="assets/images/paris_airport.png" alt="Paris aéroport"></div>
+        </div>
+        <div class="four columns sponsor-card">
+            <div class="sponsor-image"><img src="assets/images/fujifilm.png" alt="Fujifilm"></div>
+        </div>
+    </div>
+</div>
 
 <!-- FOOTER -->
 <footer class="footer">

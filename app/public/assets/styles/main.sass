@@ -140,6 +140,36 @@ body
     text-decoration: none
     color: black
 
+
+
+// POPUP
+
+.popup
+  width: 300px
+  height: 300px
+  position: fixed
+  right: 5vh
+  top: 50%
+  opacity: 0
+  transition: opacity .1s ease
+  z-index: 30000
+  h3
+    position: absolute
+    top: 5rem
+    right: 10vh
+    color: #D0021B
+    font-size: 5rem
+    font-weight: 800
+  p
+    position: absolute
+    top: 15vh
+    left: 5vh
+    font-size: 2rem
+
+.popupOpen
+  opacity: 1
+
+
 //PDF
 
 .pdf
@@ -169,10 +199,27 @@ body
     font-size: 2rem
     line-height: 4rem
 
-  &-link
-    top: 60%
+
+//SPONSORS
+
+
 
 // FOOTER
+.sponsor
+  &-card
+    height: 400px
+    margin: 5vh 0
+    display: flex
+    padding: 2rem
+    box-shadow: 3px 3px 10px rgba(158,155,158,0.3)
+
+  &-image
+    width: 200px
+    margin: 0 auto
+    line-height: 400px
+    img
+      width: 100%
+
 
 .footer
   width: 100%
@@ -348,15 +395,15 @@ section
  // BACKGROUNDS
 
 .hotelBackground
-  background: url("../images/island.jpg")  no-repeat
+  background: url("../images/Hotel.jpg")  no-repeat
   background-size: cover
 
 .restaurantsBackground
-  background: url("../images/resto.jpg")  no-repeat
+  background: url("../images/Restaurants.jpg")  no-repeat
   background-size: cover
 
 .spasBackground
-  background: url("../images/spa.jpg")  no-repeat
+  background: url("../images/Spabg.jpg")  no-repeat
   background-size: cover
 
 
@@ -466,7 +513,7 @@ img
   top: -150px
   cursor: pointer
 
-.header-title
+.contact-header-title
   font-size: 60px
   color: #FFF
   position: relative

@@ -1,4 +1,4 @@
-<?php include '../src/frontoffice/header.php' ?>d>
+<?php include '../src/frontoffice/header.php' ?>
 
 <body>
   <section class="home hotelBackground">

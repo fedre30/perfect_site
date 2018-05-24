@@ -94,6 +94,22 @@ class Database {
 		return $this->getArticlesInCategory($page, $this->getCategoryByName('Compagnies aériennes')['id']);
 	}
 
+	function getHotels($page){
+		return $this->getArticlesInCategory($page, $this->getCategoryByName('Hotels')['id']);
+	}
+
+	function getRestaurants($page){
+		return $this->getArticlesInCategory($page, $this->getCategoryByName('Restaurants')['id']);
+	}
+
+	function getSpas($page){
+		return $this->getArticlesInCategory($page, $this->getCategoryByName('Spas')['id']);
+	}
+
+	function getDiscounts($page){
+		return $this->getArticlesInCategory($page, $this->getCategoryByName('Bons plans')['id']);
+	}
+
 
 	// UPDATE
 

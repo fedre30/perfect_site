@@ -106,15 +106,6 @@
   .header-social .social-item {
     margin-left: 2rem; }
 
-.top-submenu {
-  width: 200px;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.4);
-  display: none; }
-
-.submenu-header:hover .top-submenu {
-  display: block; }
-
 body {
   margin: 0;
   padding: 0;
@@ -249,6 +240,31 @@ body {
     text-decoration: none;
     color: black; }
 
+.popup {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  right: 5vh;
+  top: 50%;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  z-index: 30000; }
+  .popup h3 {
+    position: absolute;
+    top: 5rem;
+    right: 10vh;
+    color: #D0021B;
+    font-size: 5rem;
+    font-weight: 800; }
+  .popup p {
+    position: absolute;
+    top: 15vh;
+    left: 5vh;
+    font-size: 2rem; }
+
+.popupOpen {
+  opacity: 1; }
+
 @media (max-width: 760px) {
   .pdf {
     display: none; } }
@@ -271,8 +287,19 @@ body {
 .toolcard-text {
   font-size: 2rem;
   line-height: 4rem; }
-.toolcard-link {
-  top: 60%; }
+
+.sponsor-card {
+  height: 400px;
+  margin: 5vh 0;
+  display: flex;
+  padding: 2rem;
+  box-shadow: 3px 3px 10px rgba(158, 155, 158, 0.3); }
+.sponsor-image {
+  width: 200px;
+  margin: 0 auto;
+  line-height: 400px; }
+  .sponsor-image img {
+    width: 100%; }
 
 .footer {
   width: 100%;
@@ -439,15 +466,15 @@ section {
  *
  * // BACKGROUNDS */
 .hotelBackground {
-  background: url("../images/island.jpg") no-repeat;
+  background: url("../images/Hotel.jpg") no-repeat;
   background-size: cover; }
 
 .restaurantsBackground {
-  background: url("../images/resto.jpg") no-repeat;
+  background: url("../images/Restaurants.jpg") no-repeat;
   background-size: cover; }
 
 .spasBackground {
-  background: url("../images/spa.jpg") no-repeat;
+  background: url("../images/Spabg.jpg") no-repeat;
   background-size: cover; }
 
 .contact-formInput .contact-textInput:hover {
@@ -551,7 +578,7 @@ img {
   top: -150px;
   cursor: pointer; }
 
-.header-title {
+.contact-header-title {
   font-size: 60px;
   color: #FFF;
   position: relative;
